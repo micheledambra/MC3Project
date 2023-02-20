@@ -19,7 +19,12 @@ struct VolumeRGBTestView: View {
             Button("Stop") {
                 soundCreator.stopAudio()
             }
-            Spacer()
+            VStack {
+                Rectangle()
+                    .foregroundColor(Color(red: soundCreator.red/255, green: soundCreator.green/255, blue: soundCreator.blue/255))
+                    .cornerRadius(10)
+                    .padding()
+            }
             VStack{
                 Text("Red")
                 Slider(value: $soundCreator.red, in: 0...255)
