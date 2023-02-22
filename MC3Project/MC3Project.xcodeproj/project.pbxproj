@@ -15,6 +15,7 @@
 		C462F1BC299A500C00EE3BB6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C462F1BB299A500C00EE3BB6 /* ContentView.swift */; };
 		C462F1BE299A500D00EE3BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C462F1BD299A500D00EE3BB6 /* Assets.xcassets */; };
 		C462F1C1299A500D00EE3BB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C462F1C0299A500D00EE3BB6 /* Preview Assets.xcassets */; };
+		C4D20D1929A61A0E0097ABC8 /* PosixToRGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D20D1829A61A0E0097ABC8 /* PosixToRGB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		C462F1BB299A500C00EE3BB6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C462F1BD299A500D00EE3BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C462F1C0299A500D00EE3BB6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C4D20D1829A61A0E0097ABC8 /* PosixToRGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosixToRGB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				C462F1B9299A500C00EE3BB6 /* MC3ProjectApp.swift */,
 				C462F1BB299A500C00EE3BB6 /* ContentView.swift */,
+				C4D20D1829A61A0E0097ABC8 /* PosixToRGB.swift */,
 				C462F1BD299A500D00EE3BB6 /* Assets.xcassets */,
 				C462F1BF299A500D00EE3BB6 /* Preview Content */,
 				BC390A9129A29AD100DDDEFF /* SoundCreator.swift */,
@@ -159,6 +162,7 @@
 				BC390A9429A29BBB00DDDEFF /* VolumeRGBTestView.swift in Sources */,
 				BC390A9229A29AD100DDDEFF /* SoundCreator.swift in Sources */,
 				C462F1BA299A500C00EE3BB6 /* MC3ProjectApp.swift in Sources */,
+				C4D20D1929A61A0E0097ABC8 /* PosixToRGB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
