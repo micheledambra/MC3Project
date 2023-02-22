@@ -42,6 +42,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BCF44C5029A69FBA00ABE8E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC390A9129A29AD100DDDEFF /* SoundCreator.swift */,
+				C4D20D1829A61A0E0097ABC8 /* PosixToRGB.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BCF44C5129A69FCA00ABE8E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BC390A9329A29BBB00DDDEFF /* VolumeRGBTestView.swift */,
+				C462F1BB299A500C00EE3BB6 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BCF44C5229A69FF900ABE8E0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		C462F1AD299A500C00EE3BB6 = {
 			isa = PBXGroup;
 			children = (
@@ -61,13 +86,12 @@
 		C462F1B8299A500C00EE3BB6 /* MC3Project */ = {
 			isa = PBXGroup;
 			children = (
+				BCF44C5229A69FF900ABE8E0 /* ViewModels */,
+				BCF44C5129A69FCA00ABE8E0 /* Views */,
+				BCF44C5029A69FBA00ABE8E0 /* Models */,
 				C462F1B9299A500C00EE3BB6 /* MC3ProjectApp.swift */,
-				C462F1BB299A500C00EE3BB6 /* ContentView.swift */,
-				C4D20D1829A61A0E0097ABC8 /* PosixToRGB.swift */,
 				C462F1BD299A500D00EE3BB6 /* Assets.xcassets */,
 				C462F1BF299A500D00EE3BB6 /* Preview Content */,
-				BC390A9129A29AD100DDDEFF /* SoundCreator.swift */,
-				BC390A9329A29BBB00DDDEFF /* VolumeRGBTestView.swift */,
 			);
 			path = MC3Project;
 			sourceTree = "<group>";
