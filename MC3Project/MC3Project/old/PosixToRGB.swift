@@ -37,8 +37,6 @@ class ColorExtraction: ObservableObject {
     func getRGB(x:Int, y:Int){
         let data = cgImage.dataProvider!.data
         let bytes = CFDataGetBytePtr(data)!
-        
-
         let bytesPerPixel = cgImage.bitsPerPixel / cgImage.bitsPerComponent
         let offset = (y * cgImage.bytesPerRow) + (x * bytesPerPixel)
         let components = (r: bytes[offset], g: bytes[offset + 1], b: bytes[offset + 2])
