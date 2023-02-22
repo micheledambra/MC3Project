@@ -8,14 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var viewState = CGPoint.zero
+    
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+            
+            Image("test600")
+                .resizable()
+                .frame(width: 350, height:350)
+                //.ignoresSafeArea()
+                //.scaledToFill()
+                //.ignoresSafeArea(.all)
+                //.edgesIgnoringSafeArea(.all)
+                
+                .onTapGesture { location in
+                    print("Tapped at \(location)")
+                }
+                .gesture(
+                    
+                    DragGesture().onChanged { value in
+                        print("Tapped at \(value.location)")
+                        viewState = value.location
+                    }
+                    )
+                
+            //Text("Position \(viewState)")
+        } .ignoresSafeArea(edges: .all)
+        
+        .accessibilityAddTraits(.allowsDirectInteraction)
+        
     }
 }
 
