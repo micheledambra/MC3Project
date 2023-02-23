@@ -8,54 +8,50 @@
 import Foundation
 
 struct Position {
-    let x : Int
-    let y : Int
-    
+    let x: Int
+    let y: Int
+
     init(x: Int, y: Int) {
         self.x = x
         self.y = y
     }
-    
-    init(){
+
+    init() {
         self.x = 0
         self.y = 0
     }
-    
+
 }
 
 struct ColorIntesities {
-    
-    let red : Double
-    let green : Double
-    let blue : Double
-    
-    var scaledRed : Double{
+
+    var red: Double
+    var green: Double
+    var blue: Double
+
+    var scaledRed: Double {
         red/255
     }
-    
-    var scaledGreen : Double {
+
+    var scaledGreen: Double {
         green/255
     }
-    
-    var scaledBlue : Double {
+
+    var scaledBlue: Double {
         blue/255
     }
-    
-    init(){
+
+    init() {
         self.red = 0.0
         self.green = 0.0
         self.blue = 0.0
     }
-    
-    init(red : Double, green : Double, blue : Double){
+
+    init(red: Double, green: Double, blue: Double) {
         self.red = red
         self.green = green
         self.blue = blue
     }
-    
-
-    
-
 }
 
 enum RGB {

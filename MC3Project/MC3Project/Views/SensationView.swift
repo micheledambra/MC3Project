@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct SensationView: View {
-    
-    @ObservedObject var sensationVM = SensationVM(image: UIImage(named:"test300.png")!)
-    
+
+    @ObservedObject var sensationVM = SensationVM(image: UIImage(named: "test300.png")!)
+
     var body: some View {
-        VStack{
-            VStack{
+        VStack {
+            VStack {
                 Rectangle()
                     .foregroundColor(Color(
                         red: sensationVM.colorIntensities.scaledRed,
@@ -21,7 +21,7 @@ struct SensationView: View {
                         blue: sensationVM.colorIntensities.scaledBlue))
                     .frame(width: 100, height: 100)
             }
-            VStack{
+            VStack {
                 Image("test300")
                     .frame(width: 300, height: 300)
             }
@@ -29,8 +29,8 @@ struct SensationView: View {
             .accessibilityAddTraits(.allowsDirectInteraction)
         }
     }
-    
-    var dragGesture : some Gesture {
+
+    var dragGesture: some Gesture {
         DragGesture(minimumDistance: 0)
             .onChanged { value in
                 sensationVM.isDragging = true
@@ -41,7 +41,6 @@ struct SensationView: View {
                 sensationVM.isDragging = false
             }
     }
-    
 
 }
 

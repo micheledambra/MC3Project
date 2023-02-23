@@ -9,32 +9,32 @@
 /* Begin PBXBuildFile section */
 		BC390A8C29A29A3D00DDDEFF /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = BC390A8B29A29A3D00DDDEFF /* AudioKit */; };
 		BC390A8F29A29A5400DDDEFF /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = BC390A8E29A29A5400DDDEFF /* SoundpipeAudioKit */; };
-		BC390A9229A29AD100DDDEFF /* SoundCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC390A9129A29AD100DDDEFF /* SoundCreator.swift */; };
 		BC390A9429A29BBB00DDDEFF /* VolumeRGBTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC390A9329A29BBB00DDDEFF /* VolumeRGBTestView.swift */; };
+		BC9BA07229A7DCF500CCAB68 /* SoundCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BA07129A7DCF500CCAB68 /* SoundCreator.swift */; };
+		BC9BA07429A7E3E000CCAB68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BA07329A7E3E000CCAB68 /* ContentView.swift */; };
+		BC9BA07629A7E92A00CCAB68 /* TestSoundVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BA07529A7E92A00CCAB68 /* TestSoundVM.swift */; };
 		BCF44C5429A6A29A00ABE8E0 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF44C5329A6A29A00ABE8E0 /* Utilities.swift */; };
 		BCF44C5629A6A48500ABE8E0 /* SensationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF44C5529A6A48500ABE8E0 /* SensationVM.swift */; };
 		BCF44C5829A6A9E200ABE8E0 /* ColorExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF44C5729A6A9E200ABE8E0 /* ColorExtractor.swift */; };
 		BCF44C5A29A6B24300ABE8E0 /* SensationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF44C5929A6B24300ABE8E0 /* SensationView.swift */; };
 		C462F1BA299A500C00EE3BB6 /* MC3ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C462F1B9299A500C00EE3BB6 /* MC3ProjectApp.swift */; };
-		C462F1BC299A500C00EE3BB6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C462F1BB299A500C00EE3BB6 /* ContentView.swift */; };
 		C462F1BE299A500D00EE3BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C462F1BD299A500D00EE3BB6 /* Assets.xcassets */; };
 		C462F1C1299A500D00EE3BB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C462F1C0299A500D00EE3BB6 /* Preview Assets.xcassets */; };
-		C4D20D1929A61A0E0097ABC8 /* PosixToRGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D20D1829A61A0E0097ABC8 /* PosixToRGB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BC390A9129A29AD100DDDEFF /* SoundCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCreator.swift; sourceTree = "<group>"; };
 		BC390A9329A29BBB00DDDEFF /* VolumeRGBTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeRGBTestView.swift; sourceTree = "<group>"; };
+		BC9BA07129A7DCF500CCAB68 /* SoundCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCreator.swift; sourceTree = "<group>"; };
+		BC9BA07329A7E3E000CCAB68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BC9BA07529A7E92A00CCAB68 /* TestSoundVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSoundVM.swift; sourceTree = "<group>"; };
 		BCF44C5329A6A29A00ABE8E0 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		BCF44C5529A6A48500ABE8E0 /* SensationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensationVM.swift; sourceTree = "<group>"; };
 		BCF44C5729A6A9E200ABE8E0 /* ColorExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtractor.swift; sourceTree = "<group>"; };
 		BCF44C5929A6B24300ABE8E0 /* SensationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensationView.swift; sourceTree = "<group>"; };
 		C462F1B6299A500C00EE3BB6 /* MC3Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC3Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C462F1B9299A500C00EE3BB6 /* MC3ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3ProjectApp.swift; sourceTree = "<group>"; };
-		C462F1BB299A500C00EE3BB6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C462F1BD299A500D00EE3BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C462F1C0299A500D00EE3BB6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C4D20D1829A61A0E0097ABC8 /* PosixToRGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosixToRGB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +55,7 @@
 			children = (
 				BCF44C5329A6A29A00ABE8E0 /* Utilities.swift */,
 				BCF44C5729A6A9E200ABE8E0 /* ColorExtractor.swift */,
+				BC9BA07129A7DCF500CCAB68 /* SoundCreator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -63,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				BCF44C5929A6B24300ABE8E0 /* SensationView.swift */,
+				BC9BA07329A7E3E000CCAB68 /* ContentView.swift */,
+				BC390A9329A29BBB00DDDEFF /* VolumeRGBTestView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -71,19 +74,9 @@
 			isa = PBXGroup;
 			children = (
 				BCF44C5529A6A48500ABE8E0 /* SensationVM.swift */,
+				BC9BA07529A7E92A00CCAB68 /* TestSoundVM.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		BCF44C5B29A6B85300ABE8E0 /* old */ = {
-			isa = PBXGroup;
-			children = (
-				BC390A9329A29BBB00DDDEFF /* VolumeRGBTestView.swift */,
-				C462F1BB299A500C00EE3BB6 /* ContentView.swift */,
-				BC390A9129A29AD100DDDEFF /* SoundCreator.swift */,
-				C4D20D1829A61A0E0097ABC8 /* PosixToRGB.swift */,
-			);
-			path = old;
 			sourceTree = "<group>";
 		};
 		C462F1AD299A500C00EE3BB6 = {
@@ -108,7 +101,6 @@
 				BCF44C5229A69FF900ABE8E0 /* ViewModels */,
 				BCF44C5129A69FCA00ABE8E0 /* Views */,
 				BCF44C5029A69FBA00ABE8E0 /* Models */,
-				BCF44C5B29A6B85300ABE8E0 /* old */,
 				C462F1B9299A500C00EE3BB6 /* MC3ProjectApp.swift */,
 				C462F1BD299A500D00EE3BB6 /* Assets.xcassets */,
 				C462F1BF299A500D00EE3BB6 /* Preview Content */,
@@ -203,14 +195,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCF44C5429A6A29A00ABE8E0 /* Utilities.swift in Sources */,
-				C462F1BC299A500C00EE3BB6 /* ContentView.swift in Sources */,
+				BC9BA07229A7DCF500CCAB68 /* SoundCreator.swift in Sources */,
 				BCF44C5829A6A9E200ABE8E0 /* ColorExtractor.swift in Sources */,
 				BC390A9429A29BBB00DDDEFF /* VolumeRGBTestView.swift in Sources */,
 				BCF44C5A29A6B24300ABE8E0 /* SensationView.swift in Sources */,
-				BC390A9229A29AD100DDDEFF /* SoundCreator.swift in Sources */,
+				BC9BA07629A7E92A00CCAB68 /* TestSoundVM.swift in Sources */,
+				BC9BA07429A7E3E000CCAB68 /* ContentView.swift in Sources */,
 				BCF44C5629A6A48500ABE8E0 /* SensationVM.swift in Sources */,
 				C462F1BA299A500C00EE3BB6 /* MC3ProjectApp.swift in Sources */,
-				C4D20D1929A61A0E0097ABC8 /* PosixToRGB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +331,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC3Project/Preview Content\"";
-				DEVELOPMENT_TEAM = 7KKFWW2BAC;
+				DEVELOPMENT_TEAM = A653B885WN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -368,7 +360,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC3Project/Preview Content\"";
-				DEVELOPMENT_TEAM = 7KKFWW2BAC;
+				DEVELOPMENT_TEAM = A653B885WN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
