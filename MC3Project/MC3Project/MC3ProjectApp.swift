@@ -11,8 +11,9 @@ import SwiftUI
 struct MC3ProjectApp: App {
     var body: some Scene {
         WindowGroup {
+            // SensationView()
             ContentView()
-            //VolumeRGBTestView()
+            // VolumeRGBTestView()
         }
     }
 }
