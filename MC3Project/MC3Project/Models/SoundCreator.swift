@@ -36,10 +36,10 @@ struct SoundCreator: HasAudioEngine {
 
         // TODO: Add proper error handling
         try! engine.start()
+
     }
 
     func startSound() {
-        print("Start sound")
         oscillators.forEach {
             $0.start()
         }

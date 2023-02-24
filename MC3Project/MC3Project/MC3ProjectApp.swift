@@ -6,14 +6,29 @@
 //
 
 import SwiftUI
+import AudioKit
+import AVFoundation
 
 @main
 struct MC3ProjectApp: App {
+
+    init() {
+        #if os(iOS)
+            do {
+                Settings.bufferLength = .short
+                try AVAudioSession.sharedInstance().setPreferredIOBufferDuration(Settings.bufferLength.duration)
+                try AVAudioSession.sharedInstance().setCategory(.playback,
+                                                                options: [.defaultToSpeaker, .mixWithOthers, .allowBluetoothA2DP])
+                try AVAudioSession.sharedInstance().setActive(true)
+            } catch let err {
+                print(err)
+            }
+        #endif
+    }
+
     var body: some Scene {
         WindowGroup {
-            // SensationView()
             ContentView()
-            // VolumeRGBTestView()
         }
     }
 }

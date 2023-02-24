@@ -22,7 +22,7 @@ class TestSoundVM: ObservableObject {
             }
         }
     }
-    var soundCreator: SoundCreator
+    private var soundCreator: SoundCreator
 
     init() {
         self.colorIntensities = ColorIntesities()

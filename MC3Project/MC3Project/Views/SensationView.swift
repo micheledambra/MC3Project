@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SensationView: View {
 
-    @ObservedObject var sensationVM = SensationVM(image: UIImage(named: "test300.png")!)
+    @ObservedObject var sensationVM = SensationVM(image: UIImage(named: "testcolors.png")!)
 
     var body: some View {
         VStack {
@@ -22,7 +22,7 @@ struct SensationView: View {
                     .frame(width: 100, height: 100)
             }
             VStack {
-                Image("test300")
+                Image("testcolors")
                     .frame(width: 300, height: 300)
             }
             .gesture(dragGesture)
