@@ -47,7 +47,7 @@ struct SoundCreator: HasAudioEngine {
 
     func stopSound() {
         oscillators.forEach {
-            $0.stop()
+            $0.amplitude = 0.0
         }
     }
 
