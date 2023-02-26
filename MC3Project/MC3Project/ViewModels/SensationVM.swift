@@ -29,7 +29,7 @@ class SensationVM: ObservableObject {
     init(image: UIImage, imageAreaSize : CGSize) {
         self.imageAreaSize = imageAreaSize
         self.image = image.scalePreservingAspectRatio(targetSize: imageAreaSize)
-        self.colorExtractor = ColorExtractor(image: image)
+        self.colorExtractor = ColorExtractor(image: self.image)
         self.soundCreator = SoundCreator(oscillatorSettings: [
             OscillatorSettings(frequency: 261.63, amplitude: 0.0),
             OscillatorSettings(frequency: 329.63, amplitude: 0.0),
