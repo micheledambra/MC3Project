@@ -9,10 +9,13 @@ import SwiftUI
 
 struct SensationView: View {
 
-    @ObservedObject var sensationVM = SensationVM(image: UIImage(named: "testcolors.png")!)
+    
+    @ObservedObject var sensationVM = SensationVM(image: UIImage(named: "testcolors.png")!,
+                                                  imageAreaSize: UIScreen.main.bounds.size)
 
     var body: some View {
         VStack {
+            /*
             VStack {
                 Rectangle()
                     .foregroundColor(Color(
@@ -21,8 +24,9 @@ struct SensationView: View {
                         blue: sensationVM.colorIntensities.scaledBlue))
                     .frame(width: 100, height: 100)
             }
+             */
             VStack {
-                Image("testcolors")
+                Image(uiImage: sensationVM.image)
                     .frame(width: 300, height: 300)
             }
             .gesture(dragGesture)
