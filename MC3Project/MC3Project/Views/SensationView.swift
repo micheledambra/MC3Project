@@ -41,7 +41,13 @@ struct SensationView: View {
             }
             .gesture(dragGesture)
             .accessibilityAddTraits(.allowsDirectInteraction)
+            VStack{
+                Button("Dismiss"){
+                    dismiss()
+                }
+            }
         }
+
     }
 
     var dragGesture: some Gesture {
@@ -78,9 +84,10 @@ struct SensationView: View {
     }
 
 }
-
-struct SensationView_Previews: PreviewProvider {
-    static var previews: some View {
-        SensationView()
-    }
-}
+/*
+ struct SensationView_Previews: PreviewProvider {
+ static var previews: some View {
+ SensationView()
+ }
+ }
+ */
