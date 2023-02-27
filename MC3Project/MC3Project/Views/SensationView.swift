@@ -9,7 +9,19 @@ import SwiftUI
 
 struct SensationView: View {
 
-    @ObservedObject var sensationVM = SensationVM(image: UIImage(named: "test300.png")!)
+    @Environment(\.dismiss) var dismiss
+
+
+    @ObservedObject var sensationVM :SensationVM
+
+    init(){
+        sensationVM = SensationVM(image: UIImage(named: "test300.png")!)
+    }
+
+    init(imageData : Data?){
+        let img = UIImage(data: imageData!)
+        self.sensationVM = SensationVM(image: img!)
+    }
 
     var body: some View {
         VStack {
@@ -22,12 +34,18 @@ struct SensationView: View {
                     .frame(width: 100, height: 100)
             }
             VStack {
-                Image("test300")
+                Image(uiImage: sensationVM.image)
                     .frame(width: 300, height: 300)
             }
             .gesture(dragGesture)
             .accessibilityAddTraits(.allowsDirectInteraction)
+            VStack{
+                Button("Dismiss"){
+                    dismiss()
+                }
+            }
         }
+
     }
 
     var dragGesture: some Gesture {
@@ -43,9 +61,10 @@ struct SensationView: View {
     }
 
 }
-
-struct SensationView_Previews: PreviewProvider {
-    static var previews: some View {
-        SensationView()
-    }
-}
+/*
+ struct SensationView_Previews: PreviewProvider {
+ static var previews: some View {
+ SensationView()
+ }
+ }
+ */

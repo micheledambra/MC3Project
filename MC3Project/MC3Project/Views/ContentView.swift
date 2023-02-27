@@ -10,13 +10,17 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            SensationView()
+            MainView()
                 .tabItem {
                     Label("Color", systemImage: "photo.artframe")
                 }
             VolumeRGBTestView()
                 .tabItem {
                     Label("Sound", systemImage: "ear.and.waveform")
+                }
+            SensationView()
+                .tabItem {
+                    Label("Test", systemImage: "testtube.2")
                 }
         }
     }

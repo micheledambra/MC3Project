@@ -12,11 +12,23 @@ struct MainView: View {
     
     @State private var selectedItem: PhotosPickerItem?
     @State private var selectedPhotoData: Data?
+    @State private var isSheet = false
     
     
     var body: some View {
         NavigationView{
             VStack{
+
+                if let selectedPhotoData,
+                   let uiImage = UIImage(data: selectedPhotoData) {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 250, height: 250)
+                        .onTapGesture {
+                            isSheet = true
+                        }
+                }
                 
                 PhotosPicker (selection: $selectedItem,
                               matching: .any(of: [.images, .not(.livePhotos)])) {
@@ -24,9 +36,15 @@ struct MainView: View {
                 }
                 .controlSize (.large)
                 .buttonStyle(.borderedProminent)
-                .onChange(of: selectedItem) { newItem in Task {
+                .onChange(of: selectedItem) { newItem in
+                    Task{ @MainActor in
                     if let data = try? await newItem?.loadTransferable(type: Data.self) {
-                        selectedPhotoData = data } } }
+                        selectedPhotoData = data
+                    }
+                    }
+                    //isSheet = true
+
+                }
                                   
                    
                 Text("OR")
@@ -43,9 +61,12 @@ struct MainView: View {
                     
                 }
                 .navigationBarTitle("Home??")
-                
+                .fullScreenCover(isPresented: $isSheet) {
+                    SensationView(imageData: selectedPhotoData)
+                }
             }
         }
+
     }
 
 struct MainView_Previews: PreviewProvider {
