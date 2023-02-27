@@ -9,8 +9,9 @@ import SwiftUI
 
 struct SensationView: View {
 
-    let img : UIImage
-    let imgSize : CGSize
+    private let img : UIImage
+    private let imgSize : CGSize
+    @State private var scaledImgSize: CGSize
 
     @ObservedObject var sensationVM : SensationVM
 
@@ -18,6 +19,7 @@ struct SensationView: View {
         self.img = UIImage(named: "IMG_1179.heic")!
         self.sensationVM = SensationVM(image: img)
         self.imgSize = img.size
+        self.scaledImgSize = CGSize()
     }
 
     var body: some View {
@@ -46,8 +48,11 @@ struct SensationView: View {
         DragGesture(minimumDistance: 0)
             .onChanged { value in
                 sensationVM.isDragging = true
-                sensationVM.processDragAction(x: Int(value.location.x),
-                                              y: Int(value.location.y))
+                let x = Int(value.location.x)
+                let y = Int(value.location.y)
+                if (x < Int(scaledImgSize.width) && y < Int(scaledImgSize.height)){
+                    sensationVM.processDragAction(x: x,y: y)
+                }
             }
             .onEnded { _ in
                 sensationVM.isDragging = false
@@ -61,6 +66,8 @@ struct SensationView: View {
             .onAppear{
                 sensationVM.scaleFactor = calcScaleFactor(areaSize: geo.size,
                                                           imgSize: imgSize)
+                scaledImgSize.height = sensationVM.scaleFactor * imgSize.height
+                scaledImgSize.width = sensationVM.scaleFactor * imgSize.width
             }
         }
 

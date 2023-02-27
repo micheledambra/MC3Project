@@ -20,7 +20,7 @@ struct ColorExtractor {
         self.scaleFactor = scaleFactor
         let resizedImage = image.resizeByScalingFactor(scaleFactor)
         if let image = resizedImage?.cgImage {
-            print("Resized Image width: \(resizedImage!.size.width)")
+            print("Resized Image width: \(resizedImage!.size.width), height: \(resizedImage!.size.height)")
             cgImage = image
         } else {
             // TODO: Better error handling needed (Maybe show alert, image not working?
