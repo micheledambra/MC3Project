@@ -20,6 +20,7 @@
 		C462F1BA299A500C00EE3BB6 /* MC3ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C462F1B9299A500C00EE3BB6 /* MC3ProjectApp.swift */; };
 		C462F1BE299A500D00EE3BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C462F1BD299A500D00EE3BB6 /* Assets.xcassets */; };
 		C462F1C1299A500D00EE3BB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C462F1C0299A500D00EE3BB6 /* Preview Assets.xcassets */; };
+		E98670CB29A8B47D003FD8BB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98670CA29A8B47D003FD8BB /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		C462F1B9299A500C00EE3BB6 /* MC3ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3ProjectApp.swift; sourceTree = "<group>"; };
 		C462F1BD299A500D00EE3BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C462F1C0299A500D00EE3BB6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E98670CA29A8B47D003FD8BB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				BCF44C5929A6B24300ABE8E0 /* SensationView.swift */,
 				BC9BA07329A7E3E000CCAB68 /* ContentView.swift */,
 				BC390A9329A29BBB00DDDEFF /* VolumeRGBTestView.swift */,
+				E98670CA29A8B47D003FD8BB /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				BCF44C5429A6A29A00ABE8E0 /* Utilities.swift in Sources */,
 				BC9BA07229A7DCF500CCAB68 /* SoundCreator.swift in Sources */,
 				BCF44C5829A6A9E200ABE8E0 /* ColorExtractor.swift in Sources */,
+				E98670CB29A8B47D003FD8BB /* MainView.swift in Sources */,
 				BC390A9429A29BBB00DDDEFF /* VolumeRGBTestView.swift in Sources */,
 				BCF44C5A29A6B24300ABE8E0 /* SensationView.swift in Sources */,
 				BC9BA07629A7E92A00CCAB68 /* TestSoundVM.swift in Sources */,
