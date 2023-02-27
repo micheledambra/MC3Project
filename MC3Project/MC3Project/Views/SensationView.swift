@@ -18,7 +18,7 @@ struct SensationView: View {
     @ObservedObject var sensationVM : SensationVM
 
     init(){
-        self.img = UIImage(named: "IMG_1179.heic")!
+        self.img = UIImage(named: "testcolors.png")!
         self.imgSize = img.size
         self.sensationVM = SensationVM(image: img)
     }
