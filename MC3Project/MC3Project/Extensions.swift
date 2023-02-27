@@ -2,38 +2,36 @@
 //  Extensions.swift
 //  MC3Project
 //
-//  Created by Simon Bestler on 26.02.23.
+//  Created by Simon Bestler on 27.02.23.
 //
 
 import Foundation
 import UIKit
 
+
 extension UIImage {
-    func scalePreservingAspectRatio(targetSize: CGSize) -> UIImage {
-        // Determine the scale factor that preserves aspect ratio
-        let widthRatio = targetSize.width / size.width
-        let heightRatio = targetSize.height / size.height
 
-        let scaleFactor = min(widthRatio, heightRatio)
+    func resizeByScalingFactor(_ scaleFactor : Double) -> UIImage? {
+        let cgImage = self.cgImage!
 
-        // Compute the new image size that preserves aspect ratio
-        let scaledImageSize = CGSize(
-            width: size.width * scaleFactor,
-            height: size.height * scaleFactor
-        )
+        let destWidth = Int(self.size.width * scaleFactor)
+        let destHeight = Int(self.size.height * scaleFactor)
+        let destSize = CGSize(width: destWidth, height: destHeight)
+        let bitsPerComponent = 8
+        let bytesPerPixel = cgImage.bitsPerPixel / bitsPerComponent
+        let destBytesPerRow = destWidth * bytesPerPixel
 
-        // Draw and return the resized UIImage
-        let renderer = UIGraphicsImageRenderer(
-            size: scaledImageSize
-        )
+        let context = CGContext(data: nil,
+                                width: destWidth,
+                                height: destHeight,
+                                bitsPerComponent: bitsPerComponent,
+                                bytesPerRow: destBytesPerRow,
+                                space: cgImage.colorSpace!,
+                                bitmapInfo: cgImage.bitmapInfo.rawValue)!
+        context.interpolationQuality = .high
 
-        let scaledImage = renderer.image { _ in
-            self.draw(in: CGRect(
-                origin: .zero,
-                size: scaledImageSize
-            ))
-        }
-
-        return scaledImage
+        context.draw(cgImage, in: CGRect(origin: CGPoint.zero, size: destSize))
+        return context.makeImage().flatMap { UIImage(cgImage: $0, scale: 1.0, orientation: self.imageOrientation) }
     }
 }
+
