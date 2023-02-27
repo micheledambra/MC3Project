@@ -9,25 +9,33 @@ import SwiftUI
 
 struct SensationView: View {
 
-    
-    @ObservedObject var sensationVM = SensationVM(image: UIImage(named: "testcolors.png")!,
-                                                  imageAreaSize: UIScreen.main.bounds.size)
+    let img : UIImage
+    let imgSize : CGSize
+
+    @ObservedObject var sensationVM : SensationVM
+
+    init(){
+        self.img = UIImage(named: "IMG_1179.heic")!
+        self.sensationVM = SensationVM(image: img)
+        self.imgSize = img.size
+    }
 
     var body: some View {
         VStack {
-            /*
             VStack {
                 Rectangle()
                     .foregroundColor(Color(
                         red: sensationVM.colorIntensities.scaledRed,
                         green: sensationVM.colorIntensities.scaledGreen,
                         blue: sensationVM.colorIntensities.scaledBlue))
-                    .frame(width: 100, height: 100)
+                    .frame(width: 50, height: 50)
             }
-             */
+            
             VStack {
-                Image(uiImage: sensationVM.image)
-                    .frame(width: 300, height: 300)
+                GeometryReader { geo in
+                    resizableImageView(geo: geo)
+                }
+
             }
             .gesture(dragGesture)
             .accessibilityAddTraits(.allowsDirectInteraction)
@@ -44,6 +52,22 @@ struct SensationView: View {
             .onEnded { _ in
                 sensationVM.isDragging = false
             }
+    }
+
+    private func resizableImageView(geo : GeometryProxy) -> some View {
+        return Image(uiImage: sensationVM.image)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .onAppear{
+                sensationVM.scaleFactor = calcScaleFactor(areaSize: geo.size,
+                                                          imgSize: imgSize)
+            }
+        }
+
+    private func calcScaleFactor(areaSize: CGSize, imgSize: CGSize) -> Double {
+        let widhtScale = areaSize.width / imgSize.width
+        let heightScale = areaSize.height / imgSize.height
+        return min(widhtScale, heightScale)
     }
 
 }

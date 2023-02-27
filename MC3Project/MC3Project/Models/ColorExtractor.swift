@@ -10,13 +10,17 @@ import UIKit
 
 struct ColorExtractor {
 
+    private let scaleFactor: Double
     private let cgImage: CGImage
     private let imageData: CFData
     private let imageBytePointer: UnsafePointer<UInt8>
     private let bytesPerPixel: Int
 
-    init(image: UIImage) {
-        if let image = image.cgImage {
+    init(image: UIImage, scaleFactor : Double) {
+        self.scaleFactor = scaleFactor
+        let resizedImage = image.resizeByScalingFactor(scaleFactor)
+        if let image = resizedImage?.cgImage {
+            print("Resized Image width: \(resizedImage!.size.width)")
             cgImage = image
         } else {
             // TODO: Better error handling needed (Maybe show alert, image not working?
@@ -38,7 +42,6 @@ struct ColorExtractor {
         let red = Double(imageBytePointer[offset])
         let green = Double(imageBytePointer[offset + 1])
         let blue = Double(imageBytePointer[offset + 2])
-
         return ColorIntesities(red: red, green: green, blue: blue)
     }
 

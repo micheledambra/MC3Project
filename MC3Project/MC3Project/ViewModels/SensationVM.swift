@@ -18,24 +18,27 @@ class SensationVM: ObservableObject {
 
     @Published var colorIntensities = ColorIntesities()
     var dragPosition = Position()
-    var imageAreaSize : CGSize
-
     var image: UIImage
+    @Published var scaleFactor : Double {
+        didSet {
+            self.colorExtractor = ColorExtractor(image: self.image, scaleFactor: scaleFactor)
+        }
+    }
 
     private var colorExtractor: ColorExtractor
     private var soundCreator: SoundCreator
     
 
-    init(image: UIImage, imageAreaSize : CGSize) {
-        self.imageAreaSize = imageAreaSize
-        self.image = image.scalePreservingAspectRatio(targetSize: imageAreaSize)
-        self.colorExtractor = ColorExtractor(image: self.image)
+    init(image: UIImage) {
+        self.scaleFactor = 1.0
+        self.image = image
         self.soundCreator = SoundCreator(oscillatorSettings: [
             OscillatorSettings(frequency: 261.63, amplitude: 0.0),
             OscillatorSettings(frequency: 329.63, amplitude: 0.0),
             OscillatorSettings(frequency: 392, amplitude: 0.0)
         ]
         )
+        self.colorExtractor = ColorExtractor(image: self.image, scaleFactor: 1.0)
     }
 
     func processDragAction(x: Int, y: Int) {
