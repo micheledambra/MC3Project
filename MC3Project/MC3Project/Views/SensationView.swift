@@ -9,17 +9,24 @@ import SwiftUI
 
 struct SensationView: View {
 
+    @Environment(\.dismiss) var dismiss
+
     private let img : UIImage
     private let imgSize : CGSize
-    @State private var scaledImgSize: CGSize
+    @State private var scaledImgSize = CGSize()
 
     @ObservedObject var sensationVM : SensationVM
 
     init(){
         self.img = UIImage(named: "IMG_1179.heic")!
-        self.sensationVM = SensationVM(image: img)
         self.imgSize = img.size
-        self.scaledImgSize = CGSize()
+        self.sensationVM = SensationVM(image: img)
+    }
+
+    init(imageData : Data?){
+        self.img = UIImage(data: imageData!)!
+        self.imgSize = img.size
+        self.sensationVM = SensationVM(image: img)
     }
 
     var body: some View {
@@ -84,10 +91,10 @@ struct SensationView: View {
     }
 
 }
-/*
+
  struct SensationView_Previews: PreviewProvider {
- static var previews: some View {
- SensationView()
+     static var previews: some View {
+        SensationView()
+     }
  }
- }
- */
+
