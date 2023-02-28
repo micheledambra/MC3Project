@@ -33,5 +33,15 @@ extension UIImage {
         context.draw(cgImage, in: CGRect(origin: CGPoint.zero, size: destSize))
         return context.makeImage().flatMap { UIImage(cgImage: $0, scale: 1.0, orientation: self.imageOrientation) }
     }
+
+    /// Converts the underlying image to JPG, so that different image processing is always the same without having to take into account if the image originally was in a dfferent format (especially PNG)
+    func convertToJPEG() -> UIImage? {
+        let jpegData = self.jpegData(compressionQuality: 1.0)
+        if let jpegData = jpegData, let newImage = UIImage(data: jpegData) {
+            return newImage
+        } else {
+            return nil
+        }
+    }
 }
 

@@ -24,9 +24,16 @@ struct SensationView: View {
     }
 
     init(imageData : Data?){
-        self.img = UIImage(data: imageData!)!
-        self.imgSize = img.size
-        self.sensationVM = SensationVM(image: img)
+        if let imageData = imageData,
+           let originalImage = UIImage(data: imageData),
+           let img = originalImage.convertToJPEG(){
+            self.img = img
+            self.imgSize = self.img.size
+            self.sensationVM = SensationVM(image: img)
+        }else {
+            self = .init()
+        }
+
     }
 
     var body: some View {
