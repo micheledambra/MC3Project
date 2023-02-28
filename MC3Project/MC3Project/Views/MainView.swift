@@ -13,17 +13,15 @@ struct MainView: View {
     @State private var selectedItem: PhotosPickerItem?
     @State private var selectedPhotoData: Data?
     @State private var isSheet = false
-    
-    
+
     var body: some View {
         
-        NavigationView{
+        NavigationView {
             ZStack {
-               BubbleAnimation()
-                
-                
+                BubbleAnimation()
+                    .ignoresSafeArea()
                 VStack{
-                    
+                    //TODO: Maybe remove? Do we want to keep this?
                     if let selectedPhotoData,
                        let uiImage = UIImage(data: selectedPhotoData) {
                         Image(uiImage: uiImage)
@@ -34,48 +32,55 @@ struct MainView: View {
                                 isSheet = true
                             }
                     }
-                    
-                    PhotosPicker (selection: $selectedItem,
-                                  matching: .any(of: [.images, .not(.livePhotos)])) {
+                    PhotosPicker(selection: $selectedItem,
+                                 matching: .any(of: [.images, .not(.livePhotos)])) {
                         Label("Choose from Library", systemImage: "photo")
                     }
-                                  .controlSize (.large)
-                                  .buttonStyle(.borderedProminent)
-                                  .onChange(of: selectedItem) { newItem in
-                                      Task{ @MainActor in
-                                          if let data = try? await newItem?.loadTransferable(type: Data.self) {
-                                              selectedPhotoData = data
-                                          }
-                                      }
-                                      //isSheet = true
-                                      
-                                  }
-                    
-                    
+                     .controlSize (.large)
+                     .buttonStyle(.borderedProminent)
+                     .onChange(of: selectedItem) { newItem in
+                         selectedItem = newItem
+                         loadImage()
+                     }
+
                     Text("OR")
                         .padding()
-                    
+
                     Button {  } label: {
                         Image(systemName: "square.and.arrow.down")
-                        Text("Download/ Select from API") }
+                        Text("Download/Select from API")
+                    }
                     .buttonStyle(.borderedProminent)
                     .controlSize(.large)
                     .contentShape(Rectangle())
                     .padding()
-                    
-                    
                 }
                 .navigationBarTitle("Home??")
                 .fullScreenCover(isPresented: $isSheet) {
                     SensationView(imageData: selectedPhotoData)
                 }
-                
             }
-            .ignoresSafeArea()
-            
-        }//zstack
+        }
+
+
     }
-    
+
+    func loadImage() {
+        if let selectedItem = selectedItem {
+            selectedItem.loadTransferable(type: Data.self) { result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let data):
+                        selectedPhotoData = data
+                        isSheet = true
+                    case .failure(let error):
+                        // TODO: Proper error handling (show alert that loading the image was not possible)
+                        print(error)
+                    }
+                }
+            }
+        }
+    }
 }
 
 struct MainView_Previews: PreviewProvider {
