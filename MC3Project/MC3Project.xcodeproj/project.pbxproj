@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4514DEE829ADFCBC00A96D4B /* BubbleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514DEE729ADFCBC00A96D4B /* BubbleAnimation.swift */; };
 		BC390A8C29A29A3D00DDDEFF /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = BC390A8B29A29A3D00DDDEFF /* AudioKit */; };
 		BC390A8F29A29A5400DDDEFF /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = BC390A8E29A29A5400DDDEFF /* SoundpipeAudioKit */; };
 		BC390A9429A29BBB00DDDEFF /* VolumeRGBTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC390A9329A29BBB00DDDEFF /* VolumeRGBTestView.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4514DEE729ADFCBC00A96D4B /* BubbleAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleAnimation.swift; sourceTree = "<group>"; };
 		BC390A9329A29BBB00DDDEFF /* VolumeRGBTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeRGBTestView.swift; sourceTree = "<group>"; };
 		BC9BA07129A7DCF500CCAB68 /* SoundCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCreator.swift; sourceTree = "<group>"; };
 		BC9BA07329A7E3E000CCAB68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				BCF44C5529A6A48500ABE8E0 /* SensationVM.swift */,
 				BC9BA07529A7E92A00CCAB68 /* TestSoundVM.swift */,
+				4514DEE729ADFCBC00A96D4B /* BubbleAnimation.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				BC9BA07229A7DCF500CCAB68 /* SoundCreator.swift in Sources */,
 				BCF44C5829A6A9E200ABE8E0 /* ColorExtractor.swift in Sources */,
 				E98670CB29A8B47D003FD8BB /* MainView.swift in Sources */,
+				4514DEE829ADFCBC00A96D4B /* BubbleAnimation.swift in Sources */,
 				BC390A9429A29BBB00DDDEFF /* VolumeRGBTestView.swift in Sources */,
 				BCF44C5A29A6B24300ABE8E0 /* SensationView.swift in Sources */,
 				BCBC31E929ACADE200145CF5 /* Extensions.swift in Sources */,
