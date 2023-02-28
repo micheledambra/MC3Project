@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct BubbleAnimation: View {
+    
     @State var scale : CGFloat = 1
     let rouge = Color(red: 255, green: 255, blue: 255) //custom color
+   
     var body: some View {
         
         ZStack {
@@ -36,15 +38,6 @@ struct BubbleAnimation: View {
                                       y: .random (in:0...834)))
             }
             
-            /* ZStack{
-             Rectangle()
-             .frame(width: 116.0, height: 57.0)
-             .cornerRadius(/*@START_MENU_TOKEN@*/13.0/*@END_MENU_TOKEN@*/)
-             .foregroundColor(.black)
-             Button("Upload") {
-             /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-             } .foregroundColor(.white)
-             }*/
         }
         
         .onAppear {
@@ -53,15 +46,13 @@ struct BubbleAnimation: View {
         }
         
         .drawingGroup(opaque: false, colorMode: .linear) // makes the app faster, rendering the contents of the view into an off-screen image before putting it back onto the screen as a single rendered output
-        .background(
-            Rectangle()
-                .foregroundColor(rouge))
-        //.ignoresSafeArea()
+ 
     }
+}
     
     struct BubbleAnimation_Previews: PreviewProvider {
         static var previews: some View {
             BubbleAnimation()
         }
     }
-}
+
