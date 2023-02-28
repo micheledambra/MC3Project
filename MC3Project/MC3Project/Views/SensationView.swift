@@ -70,9 +70,8 @@ struct SensationView: View {
                 sensationVM.isDragging = true
                 let x = Int(value.location.x)
                 let y = Int(value.location.y)
-                if (x < Int(scaledImgSize.width) && y < Int(scaledImgSize.height)){
-                    sensationVM.processDragAction(x: x,y: y)
-                }
+                let position = Position(x: x, y: y)
+                sensationVM.processDragAction(position: position, scaledImgSize: scaledImgSize)
             }
             .onEnded { _ in
                 sensationVM.isDragging = false

@@ -41,10 +41,15 @@ class SensationVM: ObservableObject {
         self.colorExtractor = ColorExtractor(image: self.image, scaleFactor: 1.0)
     }
 
-    func processDragAction(x: Int, y: Int) {
-        dragPosition = Position(x: x, y: y)
-        colorIntensities = colorExtractor.getRGB(at: dragPosition)
-        updateSoundSettings(colorIntensities: colorIntensities)
+    func processDragAction(position : Position, scaledImgSize : CGSize) {
+        dragPosition = position
+        if(position.x < Int(scaledImgSize.width) && position.x > 0 &&
+           position.y < Int(scaledImgSize.height) && position.y > 0){
+            colorIntensities = colorExtractor.getRGB(at: dragPosition)
+            updateSoundSettings(colorIntensities: colorIntensities)
+        }else {
+            colorIntensities = ColorIntesities()
+        }
     }
 
     private func updateSoundSettings(colorIntensities: ColorIntesities) {
