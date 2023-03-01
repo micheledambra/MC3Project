@@ -14,6 +14,7 @@ struct LearningView: View {
     var body: some View {
         VStack (spacing: 0) {
             Rectangle().fill(.black)
+            Rectangle().fill(.white)
             Rectangle().fill(.red)
             Rectangle().fill(.orange)
             Rectangle().fill(.yellow)
@@ -21,7 +22,6 @@ struct LearningView: View {
             Rectangle().fill(.blue)
             Rectangle().fill(.indigo)
             Rectangle().fill(.purple)
-            Rectangle().fill(.white)
         }
         // .ignoresSafeArea()
     }
