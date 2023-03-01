@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct LearningView: View {
-    let deviceWidth = UIScreen.main.bounds.width
-    let deviceHeight = UIScreen.main.bounds.height
     
     var body: some View {
         VStack (spacing: 0) {
