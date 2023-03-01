@@ -25,6 +25,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Test", systemImage: "testtube.2")
                 }
+            LearningView()
+                .tabItem {
+                    Label("Colors", systemImage: "paintpalette")
+                }
         }
     }
 }
