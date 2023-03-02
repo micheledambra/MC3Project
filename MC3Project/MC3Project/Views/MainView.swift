@@ -25,6 +25,7 @@ struct MainView: View {
                     PhotosPicker(selection: $selectedItem,
                                  matching: .any(of: [.images, .not(.livePhotos)])) {
                         Label("Choose from Library", systemImage: "photo")
+                            .bold()
                     }
                      .controlSize (.large)
                      .buttonStyle(.borderedProminent)
@@ -34,16 +35,18 @@ struct MainView: View {
                      }
 
                     Text("OR")
-                        .padding()
+                        .padding(22)
+                        .bold()
 
                     Button {  } label: {
                         Image(systemName: "square.and.arrow.down")
                         Text("Download/Select from API")
+                            .bold()
                     }
                     .buttonStyle(.borderedProminent)
                     .controlSize(.large)
                     .contentShape(Rectangle())
-                    .padding()
+                    //.padding()
                 }
                 //.navigationBarTitle("Home??")
                 .fullScreenCover(isPresented: $isSheet) {
