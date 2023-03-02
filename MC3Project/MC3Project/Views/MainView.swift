@@ -18,7 +18,7 @@ struct MainView: View {
         
         NavigationView {
             ZStack {
-                BubbleAnimation()
+                BubbleAnimation2()
                     .ignoresSafeArea()
                 VStack{
                     //TODO: Maybe remove? Do we want to keep this?
