@@ -9,7 +9,9 @@ import SwiftUI
 import PhotosUI
 
 struct MainView: View {
-    
+
+    @State private var sensationView = SensationView()
+
     @State private var selectedItem: PhotosPickerItem?
     @State private var selectedPhotoData: Data?
     @State private var isSheet = false
@@ -21,18 +23,24 @@ struct MainView: View {
                 BubbleAnimation2()
                     .ignoresSafeArea()
                 VStack{
-                    //TODO: Maybe remove? Do we want to keep this?
+                    if let selectedPhotoData = selectedPhotoData{
+                        Image(uiImage: (UIImage(data: selectedPhotoData) ?? UIImage(systemName: "x.square"))!)
+                            .resizable()
+                            .frame(width: 0, height: 0)
+                    }
                     PhotosPicker(selection: $selectedItem,
                                  matching: .any(of: [.images, .not(.livePhotos)])) {
                         Label("Choose from Library", systemImage: "photo")
                             .bold()
                     }
-                     .controlSize (.large)
-                     .buttonStyle(.borderedProminent)
-                     .onChange(of: selectedItem) { newItem in
-                         selectedItem = newItem
-                         loadImage()
-                     }
+                                 .controlSize (.large)
+                                 .buttonStyle(.borderedProminent)
+                                 .onChange(of: selectedItem) { newItem in
+                                     selectedItem = newItem
+                                     Task{
+                                         await loadImage()
+                                     }
+                                 }
 
                     Text("OR")
                         .padding(22)
@@ -58,23 +66,25 @@ struct MainView: View {
 
     }
 
-    func loadImage() {
+    @MainActor
+    func loadImage() async {
         if let selectedItem = selectedItem {
-            selectedItem.loadTransferable(type: Data.self) { result in
-                DispatchQueue.main.async {
-                    switch result {
-                    case .success(let data):
-                        selectedPhotoData = data
-                        isSheet = true
-                    case .failure(let error):
-                        // TODO: Proper error handling (show alert that loading the image was not possible)
-                        print(error)
-                    }
+            do {
+                let result = try await selectedItem.loadTransferable(type: Data.self)
+                if let result = result {
+                    self.selectedPhotoData = result
+                    isSheet = true
+                }else {
+                    print("Extracting data from image not possible")
                 }
+            } catch {
+                print(error)
             }
+
         }
     }
 }
+
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
