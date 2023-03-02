@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIShakeGesture
 
 struct SensationView: View {
 
@@ -55,12 +56,11 @@ struct SensationView: View {
             }
             .gesture(dragGesture)
             .accessibilityAddTraits(.allowsDirectInteraction)
-            VStack{
-                Button("Dismiss"){
-                    dismiss()
-                }
-            }
+           
         }
+        .onShake{ // ADD THIS
+            dismiss()
+              }
 
     }
 

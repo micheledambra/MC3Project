@@ -35,6 +35,15 @@
         "revision" : "c9349accd3c9e102a35962cf40c998eacb6108d5",
         "version" : "5.5.3"
       }
+    },
+    {
+      "identity" : "swiftui-shake-gesture",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/globulus/swiftui-shake-gesture.git",
+      "state" : {
+        "revision" : "cee0c7d741cda634c43ecb48224fd2b28914426a",
+        "version" : "1.0.0"
+      }
     }
   ],
   "version" : 2

@@ -25,6 +25,7 @@
 		C462F1BA299A500C00EE3BB6 /* MC3ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C462F1B9299A500C00EE3BB6 /* MC3ProjectApp.swift */; };
 		C462F1BE299A500D00EE3BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C462F1BD299A500D00EE3BB6 /* Assets.xcassets */; };
 		C462F1C1299A500D00EE3BB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C462F1C0299A500D00EE3BB6 /* Preview Assets.xcassets */; };
+		C4F2281F29B0C00A0073F4AF /* SwiftUIShakeGesture in Frameworks */ = {isa = PBXBuildFile; productRef = C4F2281E29B0C00A0073F4AF /* SwiftUIShakeGesture */; };
 		E98670CB29A8B47D003FD8BB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98670CA29A8B47D003FD8BB /* MainView.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC390A8F29A29A5400DDDEFF /* SoundpipeAudioKit in Frameworks */,
+				C4F2281F29B0C00A0073F4AF /* SwiftUIShakeGesture in Frameworks */,
 				BC390A8C29A29A3D00DDDEFF /* AudioKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +155,7 @@
 			packageProductDependencies = (
 				BC390A8B29A29A3D00DDDEFF /* AudioKit */,
 				BC390A8E29A29A5400DDDEFF /* SoundpipeAudioKit */,
+				C4F2281E29B0C00A0073F4AF /* SwiftUIShakeGesture */,
 			);
 			productName = MC3Project;
 			productReference = C462F1B6299A500C00EE3BB6 /* MC3Project.app */;
@@ -185,6 +188,7 @@
 			packageReferences = (
 				BC390A8A29A29A3D00DDDEFF /* XCRemoteSwiftPackageReference "AudioKit" */,
 				BC390A8D29A29A5400DDDEFF /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */,
+				C4F2281D29B0C00A0073F4AF /* XCRemoteSwiftPackageReference "swiftui-shake-gesture" */,
 			);
 			productRefGroup = C462F1B7299A500C00EE3BB6 /* Products */;
 			projectDirPath = "";
@@ -449,6 +453,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		C4F2281D29B0C00A0073F4AF /* XCRemoteSwiftPackageReference "swiftui-shake-gesture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/globulus/swiftui-shake-gesture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -461,6 +473,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BC390A8D29A29A5400DDDEFF /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */;
 			productName = SoundpipeAudioKit;
+		};
+		C4F2281E29B0C00A0073F4AF /* SwiftUIShakeGesture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4F2281D29B0C00A0073F4AF /* XCRemoteSwiftPackageReference "swiftui-shake-gesture" */;
+			productName = SwiftUIShakeGesture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
