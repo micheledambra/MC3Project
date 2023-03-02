@@ -18,7 +18,7 @@ struct MainView: View {
         
         NavigationView {
             ZStack {
-                BubbleAnimation()
+                BubbleAnimation2()
                     .ignoresSafeArea()
                 VStack{
                     //TODO: Maybe remove? Do we want to keep this?
@@ -45,7 +45,7 @@ struct MainView: View {
                     .contentShape(Rectangle())
                     .padding()
                 }
-                .navigationBarTitle("Home??")
+                //.navigationBarTitle("Home??")
                 .fullScreenCover(isPresented: $isSheet) {
                     SensationView(imageData: selectedPhotoData)
                 }
