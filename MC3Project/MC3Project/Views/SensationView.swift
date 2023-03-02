@@ -57,6 +57,7 @@ struct SensationView: View {
             .gesture(dragGesture)
             .accessibilityAddTraits(.allowsDirectInteraction)
            
+            Text("Shake to Exit")
         }
         .onShake{ // ADD THIS
             dismiss()
