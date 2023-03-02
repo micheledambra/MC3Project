@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CA8397529B0A7BB00D1B67B /* BubbleAnimation2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8397429B0A7BB00D1B67B /* BubbleAnimation2.swift */; };
 		1CC79FFD29AF63B60010E005 /* LearningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC79FFC29AF63B60010E005 /* LearningView.swift */; };
 		4514DEE829ADFCBC00A96D4B /* BubbleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514DEE729ADFCBC00A96D4B /* BubbleAnimation.swift */; };
 		BC390A8C29A29A3D00DDDEFF /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = BC390A8B29A29A3D00DDDEFF /* AudioKit */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CA8397429B0A7BB00D1B67B /* BubbleAnimation2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleAnimation2.swift; sourceTree = "<group>"; };
 		1CC79FFC29AF63B60010E005 /* LearningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningView.swift; sourceTree = "<group>"; };
 		4514DEE729ADFCBC00A96D4B /* BubbleAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleAnimation.swift; sourceTree = "<group>"; };
 		BC390A9329A29BBB00DDDEFF /* VolumeRGBTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeRGBTestView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				BCF44C5529A6A48500ABE8E0 /* SensationVM.swift */,
 				BC9BA07529A7E92A00CCAB68 /* TestSoundVM.swift */,
 				4514DEE729ADFCBC00A96D4B /* BubbleAnimation.swift */,
+				1CA8397429B0A7BB00D1B67B /* BubbleAnimation2.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				1CC79FFD29AF63B60010E005 /* LearningView.swift in Sources */,
 				BCF44C5429A6A29A00ABE8E0 /* Utilities.swift in Sources */,
 				BC9BA07229A7DCF500CCAB68 /* SoundCreator.swift in Sources */,
+				1CA8397529B0A7BB00D1B67B /* BubbleAnimation2.swift in Sources */,
 				BCF44C5829A6A9E200ABE8E0 /* ColorExtractor.swift in Sources */,
 				E98670CB29A8B47D003FD8BB /* MainView.swift in Sources */,
 				4514DEE829ADFCBC00A96D4B /* BubbleAnimation.swift in Sources */,
