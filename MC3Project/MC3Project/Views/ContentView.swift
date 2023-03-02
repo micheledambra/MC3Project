@@ -21,7 +21,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Sound", systemImage: "ear.and.waveform")
                 }
-            LearningView()
+            LearningView2()
                 .tabItem {
                     Label("Colors", systemImage: "paintpalette")
                 }
