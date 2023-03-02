@@ -45,7 +45,7 @@ struct MainView: View {
                     .contentShape(Rectangle())
                     .padding()
                 }
-                .navigationBarTitle("Home??")
+                //.navigationBarTitle("Home??")
                 .fullScreenCover(isPresented: $isSheet) {
                     SensationView(imageData: selectedPhotoData)
                 }
