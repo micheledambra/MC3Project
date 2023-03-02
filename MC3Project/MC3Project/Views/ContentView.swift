@@ -21,10 +21,6 @@ struct ContentView: View {
                 .tabItem {
                     Label("Sound", systemImage: "ear.and.waveform")
                 }
-            SensationView()
-                .tabItem {
-                    Label("Test", systemImage: "testtube.2")
-                }
             LearningView()
                 .tabItem {
                     Label("Colors", systemImage: "paintpalette")

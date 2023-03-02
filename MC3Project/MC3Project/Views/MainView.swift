@@ -22,16 +22,6 @@ struct MainView: View {
                     .ignoresSafeArea()
                 VStack{
                     //TODO: Maybe remove? Do we want to keep this?
-                    if let selectedPhotoData,
-                       let uiImage = UIImage(data: selectedPhotoData) {
-                        Image(uiImage: uiImage)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 250, height: 250)
-                            .onTapGesture {
-                                isSheet = true
-                            }
-                    }
                     PhotosPicker(selection: $selectedItem,
                                  matching: .any(of: [.images, .not(.livePhotos)])) {
                         Label("Choose from Library", systemImage: "photo")
