@@ -48,11 +48,11 @@ class SensationVM: ObservableObject {
            position.y < Int(scaledImgSize.height) && position.y > 0){
             haptics.stop()
             colorIntensities = colorExtractor.getRGB(at: dragPosition)
-            updateSoundSettings(colorIntensities: colorIntensities)
         }else {
             haptics.play()
             colorIntensities = ColorIntesities()
         }
+        updateSoundSettings(colorIntensities: colorIntensities)
     }
 
     private func updateSoundSettings(colorIntensities: ColorIntesities) {
