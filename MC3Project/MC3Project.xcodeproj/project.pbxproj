@@ -27,6 +27,7 @@
 		C462F1C1299A500D00EE3BB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C462F1C0299A500D00EE3BB6 /* Preview Assets.xcassets */; };
 		C4F2281F29B0C00A0073F4AF /* SwiftUIShakeGesture in Frameworks */ = {isa = PBXBuildFile; productRef = C4F2281E29B0C00A0073F4AF /* SwiftUIShakeGesture */; };
 		E98670CB29A8B47D003FD8BB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98670CA29A8B47D003FD8BB /* MainView.swift */; };
+		E9E5548729AE01D000ABC826 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E5548629AE01D000ABC826 /* Onboarding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		C462F1BD299A500D00EE3BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C462F1C0299A500D00EE3BB6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E98670CA29A8B47D003FD8BB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E9E5548629AE01D000ABC826 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				BC9BA07529A7E92A00CCAB68 /* TestSoundVM.swift */,
 				4514DEE729ADFCBC00A96D4B /* BubbleAnimation.swift */,
 				1CA8397429B0A7BB00D1B67B /* BubbleAnimation2.swift */,
+				E9E5548629AE01D000ABC826 /* Onboarding.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				4514DEE829ADFCBC00A96D4B /* BubbleAnimation.swift in Sources */,
 				BC390A9429A29BBB00DDDEFF /* VolumeRGBTestView.swift in Sources */,
 				BCF44C5A29A6B24300ABE8E0 /* SensationView.swift in Sources */,
+				E9E5548729AE01D000ABC826 /* Onboarding.swift in Sources */,
 				BCBC31E929ACADE200145CF5 /* Extensions.swift in Sources */,
 				BC9BA07629A7E92A00CCAB68 /* TestSoundVM.swift in Sources */,
 				1CA8397929B0B54100D1B67B /* LearningView2.swift in Sources */,

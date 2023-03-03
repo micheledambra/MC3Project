@@ -15,6 +15,8 @@ struct MainView: View {
     @State private var selectedItem: PhotosPickerItem?
     @State private var selectedPhotoData: Data?
     @State private var isSheet = false
+    
+    @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
 
     var body: some View {
         
@@ -61,6 +63,10 @@ struct MainView: View {
                     SensationView(imageData: selectedPhotoData)
                 }
             }
+        .fullScreenCover(isPresented: $shouldShowOnboarding, content: {
+            OnboardingView(shouldShowOnboarding: $shouldShowOnboarding)
+})
+
         }
 
 
