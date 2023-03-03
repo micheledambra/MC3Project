@@ -44,7 +44,7 @@ struct MainView: View {
                                      }
                                  }
 
-                    Text("OR")
+                    Text("Or")
                         .padding(22)
                         .bold()
 
@@ -54,11 +54,11 @@ struct MainView: View {
                             .bold()
                     }
                     .buttonStyle(.borderedProminent)
+                    //.background("ButtonColor")
                     .controlSize(.large)
                     .contentShape(Rectangle())
-                    //.padding()
+                    
                 }
-                //.navigationBarTitle("Home??")
                 .fullScreenCover(isPresented: $isSheet) {
                     SensationView(imageData: selectedPhotoData)
                 }

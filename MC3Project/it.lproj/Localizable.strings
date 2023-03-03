@@ -22,8 +22,11 @@
 
 //Main View
 "Choose from Library" = "Scegli dalla galleria";
-"OR" = "Oppure";
+"Or" = "Oppure";
 "Download/Select from API" = "Scarica/Seleziona dalle API";
+
+//SensationView
+"Shake to Exit" = "Scuoti per uscire";
 
 //VolumeRGBTestView
 "Play" = "Play";
