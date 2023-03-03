@@ -17,6 +17,7 @@
 		BC9BA07229A7DCF500CCAB68 /* SoundCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BA07129A7DCF500CCAB68 /* SoundCreator.swift */; };
 		BC9BA07429A7E3E000CCAB68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BA07329A7E3E000CCAB68 /* ContentView.swift */; };
 		BC9BA07629A7E92A00CCAB68 /* TestSoundVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BA07529A7E92A00CCAB68 /* TestSoundVM.swift */; };
+		BCA77AAF29B12D7900EA789C /* CustomHaptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA77AAE29B12D7900EA789C /* CustomHaptics.swift */; };
 		BCBC31E929ACADE200145CF5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBC31E829ACADE200145CF5 /* Extensions.swift */; };
 		BCF44C5429A6A29A00ABE8E0 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF44C5329A6A29A00ABE8E0 /* Utilities.swift */; };
 		BCF44C5629A6A48500ABE8E0 /* SensationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF44C5529A6A48500ABE8E0 /* SensationVM.swift */; };
@@ -40,6 +41,7 @@
 		BC9BA07129A7DCF500CCAB68 /* SoundCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCreator.swift; sourceTree = "<group>"; };
 		BC9BA07329A7E3E000CCAB68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC9BA07529A7E92A00CCAB68 /* TestSoundVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSoundVM.swift; sourceTree = "<group>"; };
+		BCA77AAE29B12D7900EA789C /* CustomHaptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHaptics.swift; sourceTree = "<group>"; };
 		BCBC31E829ACADE200145CF5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BCF44C5329A6A29A00ABE8E0 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		BCF44C5529A6A48500ABE8E0 /* SensationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensationVM.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				BCF44C5329A6A29A00ABE8E0 /* Utilities.swift */,
 				BCF44C5729A6A9E200ABE8E0 /* ColorExtractor.swift */,
 				BC9BA07129A7DCF500CCAB68 /* SoundCreator.swift */,
+				BCA77AAE29B12D7900EA789C /* CustomHaptics.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				BC9BA07229A7DCF500CCAB68 /* SoundCreator.swift in Sources */,
 				1CA8397529B0A7BB00D1B67B /* BubbleAnimation2.swift in Sources */,
 				BCF44C5829A6A9E200ABE8E0 /* ColorExtractor.swift in Sources */,
+				BCA77AAF29B12D7900EA789C /* CustomHaptics.swift in Sources */,
 				E98670CB29A8B47D003FD8BB /* MainView.swift in Sources */,
 				4514DEE829ADFCBC00A96D4B /* BubbleAnimation.swift in Sources */,
 				BC390A9429A29BBB00DDDEFF /* VolumeRGBTestView.swift in Sources */,
