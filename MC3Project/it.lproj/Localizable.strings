@@ -1,0 +1,41 @@
+/* 
+  Localizable.strings
+  MC3Project
+
+  Created by Michele D'Ambra on 03/03/23.
+  
+*/
+
+//Tab Bar
+"Color" = "Colore";
+"Sound" = "Suono";
+"Colors" = "Colori";
+
+//Onboarding TO TRANSLATE
+"Feel colors" = "Feel colors";
+"Select pictures from your Library and hear their colors" = "Select pictures from your Library and hear their colors";
+"Learn colors" = "Learn colors";
+"Listen to the existing color frequencies in the Learning section whenever you want" = "Listen to the existing color frequencies in the Learning section whenever you want";
+"Get Started" = "Inizia";
+
+
+
+//Main View
+"Choose from Library" = "Scegli dalla galleria";
+"OR" = "Oppure";
+"Download/Select from API" = "Scarica/Seleziona dalle API";
+
+//VolumeRGBTestView
+"Play" = "Play";
+"Stop" = "Stop";
+"Red" = "Rosso";
+"Green" = "Verde";
+"Blue" = "Blu";
+
+
+
+//Error Handling
+
+"Extracting data from image not possible" = "Impossibile estrarre dati immagine";
+
+
