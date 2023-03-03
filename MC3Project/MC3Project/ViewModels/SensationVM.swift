@@ -27,7 +27,7 @@ class SensationVM: ObservableObject {
 
     private var colorExtractor: ColorExtractor
     private var soundCreator: SoundCreator
-    
+    private var haptics: CustomHaptics
 
     init(image: UIImage) {
         self.scaleFactor = 1.0
@@ -39,15 +39,18 @@ class SensationVM: ObservableObject {
         ]
         )
         self.colorExtractor = ColorExtractor(image: self.image, scaleFactor: 1.0)
+        self.haptics = CustomHaptics()
     }
 
     func processDragAction(position : Position, scaledImgSize : CGSize) {
         dragPosition = position
         if(position.x < Int(scaledImgSize.width) && position.x > 0 &&
            position.y < Int(scaledImgSize.height) && position.y > 0){
+            haptics.stop()
             colorIntensities = colorExtractor.getRGB(at: dragPosition)
             updateSoundSettings(colorIntensities: colorIntensities)
         }else {
+            haptics.play()
             colorIntensities = ColorIntesities()
         }
     }
@@ -64,6 +67,7 @@ class SensationVM: ObservableObject {
         }else {
             colorIntensities = ColorIntesities()
             soundCreator.stopSound()
+            haptics.stop()
         }
     }
 
