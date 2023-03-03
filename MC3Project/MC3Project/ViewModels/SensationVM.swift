@@ -52,6 +52,7 @@ class SensationVM: ObservableObject {
         }else {
             haptics.play()
             colorIntensities = ColorIntesities()
+            updateSoundSettings(colorIntensities: colorIntensities)
         }
     }
 

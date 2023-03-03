@@ -43,7 +43,7 @@ struct MainView: View {
                                          await loadImage()
                                      }
                                  }
-
+                    /*
                     Text("Or")
                         .padding(22)
                         .bold()
@@ -57,16 +57,18 @@ struct MainView: View {
                     //.background("ButtonColor")
                     .controlSize(.large)
                     .contentShape(Rectangle())
-                    
+                 */
                 }
+
                 .fullScreenCover(isPresented: $isSheet) {
                     SensationView(imageData: selectedPhotoData)
                 }
             }
+        /*
         .fullScreenCover(isPresented: $shouldShowOnboarding, content: {
             OnboardingView(shouldShowOnboarding: $shouldShowOnboarding)
 })
-
+*/
         }
 
 

@@ -12,11 +12,13 @@ struct ContentView: View {
             UITabBar.appearance().backgroundColor = UIColor.systemBackground
         }
     var body: some View {
-        TabView {
+        //TabView {
             MainView()
+            /*
                 .tabItem {
                     Label("Color", systemImage: "photo.artframe")
                 }
+
             VolumeRGBTestView()
                 .tabItem {
                     Label("Sound", systemImage: "ear.and.waveform")
@@ -25,7 +27,8 @@ struct ContentView: View {
                 .tabItem {
                     Label("Colors", systemImage: "paintpalette")
                 }
-        }
+             */
+        //}
     }
 }
 
