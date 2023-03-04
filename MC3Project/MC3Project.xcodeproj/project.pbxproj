@@ -7,34 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CA8397529B0A7BB00D1B67B /* BubbleAnimation2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8397429B0A7BB00D1B67B /* BubbleAnimation2.swift */; };
+		1CA8397929B0B54100D1B67B /* LearningView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8397829B0B54100D1B67B /* LearningView2.swift */; };
+		1CC79FFD29AF63B60010E005 /* LearningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC79FFC29AF63B60010E005 /* LearningView.swift */; };
+		4514DEE829ADFCBC00A96D4B /* BubbleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514DEE729ADFCBC00A96D4B /* BubbleAnimation.swift */; };
 		BC390A8C29A29A3D00DDDEFF /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = BC390A8B29A29A3D00DDDEFF /* AudioKit */; };
 		BC390A8F29A29A5400DDDEFF /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = BC390A8E29A29A5400DDDEFF /* SoundpipeAudioKit */; };
 		BC390A9429A29BBB00DDDEFF /* VolumeRGBTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC390A9329A29BBB00DDDEFF /* VolumeRGBTestView.swift */; };
 		BC9BA07229A7DCF500CCAB68 /* SoundCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BA07129A7DCF500CCAB68 /* SoundCreator.swift */; };
 		BC9BA07429A7E3E000CCAB68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BA07329A7E3E000CCAB68 /* ContentView.swift */; };
 		BC9BA07629A7E92A00CCAB68 /* TestSoundVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BA07529A7E92A00CCAB68 /* TestSoundVM.swift */; };
+		BCA77AAF29B12D7900EA789C /* CustomHaptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA77AAE29B12D7900EA789C /* CustomHaptics.swift */; };
+		BCBC31E929ACADE200145CF5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBC31E829ACADE200145CF5 /* Extensions.swift */; };
 		BCF44C5429A6A29A00ABE8E0 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF44C5329A6A29A00ABE8E0 /* Utilities.swift */; };
 		BCF44C5629A6A48500ABE8E0 /* SensationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF44C5529A6A48500ABE8E0 /* SensationVM.swift */; };
 		BCF44C5829A6A9E200ABE8E0 /* ColorExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF44C5729A6A9E200ABE8E0 /* ColorExtractor.swift */; };
 		BCF44C5A29A6B24300ABE8E0 /* SensationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF44C5929A6B24300ABE8E0 /* SensationView.swift */; };
+		C4296BA829B1EE5A00315251 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4296BAA29B1EE5A00315251 /* Localizable.strings */; };
 		C462F1BA299A500C00EE3BB6 /* MC3ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C462F1B9299A500C00EE3BB6 /* MC3ProjectApp.swift */; };
 		C462F1BE299A500D00EE3BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C462F1BD299A500D00EE3BB6 /* Assets.xcassets */; };
 		C462F1C1299A500D00EE3BB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C462F1C0299A500D00EE3BB6 /* Preview Assets.xcassets */; };
+		C4F2281F29B0C00A0073F4AF /* SwiftUIShakeGesture in Frameworks */ = {isa = PBXBuildFile; productRef = C4F2281E29B0C00A0073F4AF /* SwiftUIShakeGesture */; };
+		E98670CB29A8B47D003FD8BB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98670CA29A8B47D003FD8BB /* MainView.swift */; };
+		E9E5548729AE01D000ABC826 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E5548629AE01D000ABC826 /* Onboarding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CA8397429B0A7BB00D1B67B /* BubbleAnimation2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleAnimation2.swift; sourceTree = "<group>"; };
+		1CA8397829B0B54100D1B67B /* LearningView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningView2.swift; sourceTree = "<group>"; };
+		1CC79FFC29AF63B60010E005 /* LearningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningView.swift; sourceTree = "<group>"; };
+		4514DEE729ADFCBC00A96D4B /* BubbleAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleAnimation.swift; sourceTree = "<group>"; };
 		BC390A9329A29BBB00DDDEFF /* VolumeRGBTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeRGBTestView.swift; sourceTree = "<group>"; };
 		BC9BA07129A7DCF500CCAB68 /* SoundCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCreator.swift; sourceTree = "<group>"; };
 		BC9BA07329A7E3E000CCAB68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC9BA07529A7E92A00CCAB68 /* TestSoundVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSoundVM.swift; sourceTree = "<group>"; };
+		BCA77AAE29B12D7900EA789C /* CustomHaptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHaptics.swift; sourceTree = "<group>"; };
+		BCBC31E829ACADE200145CF5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BCF44C5329A6A29A00ABE8E0 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		BCF44C5529A6A48500ABE8E0 /* SensationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensationVM.swift; sourceTree = "<group>"; };
 		BCF44C5729A6A9E200ABE8E0 /* ColorExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtractor.swift; sourceTree = "<group>"; };
 		BCF44C5929A6B24300ABE8E0 /* SensationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensationView.swift; sourceTree = "<group>"; };
+		C4296BA929B1EE5A00315251 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C4296BAB29B1EE5E00315251 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C462F1B6299A500C00EE3BB6 /* MC3Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC3Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C462F1B9299A500C00EE3BB6 /* MC3ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3ProjectApp.swift; sourceTree = "<group>"; };
 		C462F1BD299A500D00EE3BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C462F1C0299A500D00EE3BB6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E98670CA29A8B47D003FD8BB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E9E5548629AE01D000ABC826 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC390A8F29A29A5400DDDEFF /* SoundpipeAudioKit in Frameworks */,
+				C4F2281F29B0C00A0073F4AF /* SwiftUIShakeGesture in Frameworks */,
 				BC390A8C29A29A3D00DDDEFF /* AudioKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +77,7 @@
 				BCF44C5329A6A29A00ABE8E0 /* Utilities.swift */,
 				BCF44C5729A6A9E200ABE8E0 /* ColorExtractor.swift */,
 				BC9BA07129A7DCF500CCAB68 /* SoundCreator.swift */,
+				BCA77AAE29B12D7900EA789C /* CustomHaptics.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -66,6 +88,9 @@
 				BCF44C5929A6B24300ABE8E0 /* SensationView.swift */,
 				BC9BA07329A7E3E000CCAB68 /* ContentView.swift */,
 				BC390A9329A29BBB00DDDEFF /* VolumeRGBTestView.swift */,
+				1CC79FFC29AF63B60010E005 /* LearningView.swift */,
+				1CA8397829B0B54100D1B67B /* LearningView2.swift */,
+				E98670CA29A8B47D003FD8BB /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -75,6 +100,9 @@
 			children = (
 				BCF44C5529A6A48500ABE8E0 /* SensationVM.swift */,
 				BC9BA07529A7E92A00CCAB68 /* TestSoundVM.swift */,
+				4514DEE729ADFCBC00A96D4B /* BubbleAnimation.swift */,
+				1CA8397429B0A7BB00D1B67B /* BubbleAnimation2.swift */,
+				E9E5548629AE01D000ABC826 /* Onboarding.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -82,6 +110,7 @@
 		C462F1AD299A500C00EE3BB6 = {
 			isa = PBXGroup;
 			children = (
+				C4296BAA29B1EE5A00315251 /* Localizable.strings */,
 				C462F1B8299A500C00EE3BB6 /* MC3Project */,
 				C462F1B7299A500C00EE3BB6 /* Products */,
 			);
@@ -104,6 +133,7 @@
 				C462F1B9299A500C00EE3BB6 /* MC3ProjectApp.swift */,
 				C462F1BD299A500D00EE3BB6 /* Assets.xcassets */,
 				C462F1BF299A500D00EE3BB6 /* Preview Content */,
+				BCBC31E829ACADE200145CF5 /* Extensions.swift */,
 			);
 			path = MC3Project;
 			sourceTree = "<group>";
@@ -135,6 +165,7 @@
 			packageProductDependencies = (
 				BC390A8B29A29A3D00DDDEFF /* AudioKit */,
 				BC390A8E29A29A5400DDDEFF /* SoundpipeAudioKit */,
+				C4F2281E29B0C00A0073F4AF /* SwiftUIShakeGesture */,
 			);
 			productName = MC3Project;
 			productReference = C462F1B6299A500C00EE3BB6 /* MC3Project.app */;
@@ -162,11 +193,13 @@
 			knownRegions = (
 				en,
 				Base,
+				it,
 			);
 			mainGroup = C462F1AD299A500C00EE3BB6;
 			packageReferences = (
 				BC390A8A29A29A3D00DDDEFF /* XCRemoteSwiftPackageReference "AudioKit" */,
 				BC390A8D29A29A5400DDDEFF /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */,
+				C4F2281D29B0C00A0073F4AF /* XCRemoteSwiftPackageReference "swiftui-shake-gesture" */,
 			);
 			productRefGroup = C462F1B7299A500C00EE3BB6 /* Products */;
 			projectDirPath = "";
@@ -183,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C462F1C1299A500D00EE3BB6 /* Preview Assets.xcassets in Resources */,
+				C4296BA829B1EE5A00315251 /* Localizable.strings in Resources */,
 				C462F1BE299A500D00EE3BB6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,12 +228,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CC79FFD29AF63B60010E005 /* LearningView.swift in Sources */,
 				BCF44C5429A6A29A00ABE8E0 /* Utilities.swift in Sources */,
 				BC9BA07229A7DCF500CCAB68 /* SoundCreator.swift in Sources */,
+				1CA8397529B0A7BB00D1B67B /* BubbleAnimation2.swift in Sources */,
 				BCF44C5829A6A9E200ABE8E0 /* ColorExtractor.swift in Sources */,
+				BCA77AAF29B12D7900EA789C /* CustomHaptics.swift in Sources */,
+				E98670CB29A8B47D003FD8BB /* MainView.swift in Sources */,
+				4514DEE829ADFCBC00A96D4B /* BubbleAnimation.swift in Sources */,
 				BC390A9429A29BBB00DDDEFF /* VolumeRGBTestView.swift in Sources */,
 				BCF44C5A29A6B24300ABE8E0 /* SensationView.swift in Sources */,
+				E9E5548729AE01D000ABC826 /* Onboarding.swift in Sources */,
+				BCBC31E929ACADE200145CF5 /* Extensions.swift in Sources */,
 				BC9BA07629A7E92A00CCAB68 /* TestSoundVM.swift in Sources */,
+				1CA8397929B0B54100D1B67B /* LearningView2.swift in Sources */,
 				BC9BA07429A7E3E000CCAB68 /* ContentView.swift in Sources */,
 				BCF44C5629A6A48500ABE8E0 /* SensationVM.swift in Sources */,
 				C462F1BA299A500C00EE3BB6 /* MC3ProjectApp.swift in Sources */,
@@ -207,6 +249,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C4296BAA29B1EE5A00315251 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4296BA929B1EE5A00315251 /* it */,
+				C4296BAB29B1EE5E00315251 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C462F1C2299A500D00EE3BB6 /* Debug */ = {
@@ -259,7 +313,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -313,7 +367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -425,6 +479,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		C4F2281D29B0C00A0073F4AF /* XCRemoteSwiftPackageReference "swiftui-shake-gesture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/globulus/swiftui-shake-gesture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -437,6 +499,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BC390A8D29A29A5400DDDEFF /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */;
 			productName = SoundpipeAudioKit;
+		};
+		C4F2281E29B0C00A0073F4AF /* SwiftUIShakeGesture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4F2281D29B0C00A0073F4AF /* XCRemoteSwiftPackageReference "swiftui-shake-gesture" */;
+			productName = SwiftUIShakeGesture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

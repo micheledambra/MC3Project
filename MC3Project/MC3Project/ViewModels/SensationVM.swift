@@ -17,29 +17,41 @@ class SensationVM: ObservableObject {
     }
 
     @Published var colorIntensities = ColorIntesities()
-    var position = Position()
-    let scalingFactor = 1.0
-
-    private let image: UIImage
+    var dragPosition = Position()
+    var image: UIImage
+    @Published var scaleFactor : Double {
+        didSet {
+            self.colorExtractor = ColorExtractor(image: self.image, scaleFactor: scaleFactor)
+        }
+    }
 
     private var colorExtractor: ColorExtractor
     private var soundCreator: SoundCreator
-    
+    private var haptics: CustomHaptics
 
     init(image: UIImage) {
+        self.scaleFactor = 1.0
         self.image = image
-        self.colorExtractor = ColorExtractor(image: image)
         self.soundCreator = SoundCreator(oscillatorSettings: [
             OscillatorSettings(frequency: 261.63, amplitude: 0.0),
             OscillatorSettings(frequency: 329.63, amplitude: 0.0),
             OscillatorSettings(frequency: 392, amplitude: 0.0)
         ]
         )
+        self.colorExtractor = ColorExtractor(image: self.image, scaleFactor: 1.0)
+        self.haptics = CustomHaptics()
     }
 
-    func processDragAction(x: Int, y: Int) {
-        position = Position(x: x, y: y)
-        colorIntensities = colorExtractor.getRGB(at: position)
+    func processDragAction(position : Position, scaledImgSize : CGSize) {
+        dragPosition = position
+        if(position.x < Int(scaledImgSize.width) && position.x > 0 &&
+           position.y < Int(scaledImgSize.height) && position.y > 0){
+            haptics.stop()
+            colorIntensities = colorExtractor.getRGB(at: dragPosition)
+        }else {
+            haptics.play()
+            colorIntensities = ColorIntesities()
+        }
         updateSoundSettings(colorIntensities: colorIntensities)
     }
 
@@ -49,14 +61,13 @@ class SensationVM: ObservableObject {
         soundCreator.settings[2].amplitude = colorIntensities.scaledBlue
     }
 
-
-
     private func handleDraggingState(_ : Bool) {
         if isDragging {
             soundCreator.startSound()
         }else {
             colorIntensities = ColorIntesities()
             soundCreator.stopSound()
+            haptics.stop()
         }
     }
 
