@@ -42,7 +42,13 @@ struct ColorExtractor {
         let red = Double(imageBytePointer[offset])
         let green = Double(imageBytePointer[offset + 1])
         let blue = Double(imageBytePointer[offset + 2])
-        return ColorIntesities(red: red, green: green, blue: blue)
+
+        let colors = ColorIntesities(red: red, green: green, blue: blue)
+        return colors
     }
 
+    func getHSB(at positon: Position) -> ColorHSB {
+        let colorIntensities = getRGB(at: positon)
+        return colorIntensities.convertToHSB()
+    }
 }
