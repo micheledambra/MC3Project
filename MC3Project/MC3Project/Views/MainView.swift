@@ -34,9 +34,12 @@ struct MainView: View {
                                  matching: .any(of: [.images, .not(.livePhotos)])) {
                         Label("Choose from Library", systemImage: "photo")
                             .bold()
-                    }
-                                 .controlSize (.large)
-                                 .buttonStyle(.borderedProminent)
+                            .foregroundColor(.white)
+                            
+                    }.buttonStyle(MainViewButton())
+                                // .controlSize (.large)
+                               //  .buttonStyle(.borderedProminent)
+                    
                                  .onChange(of: selectedItem) { newItem in
                                      selectedItem = newItem
                                      Task{
@@ -49,15 +52,16 @@ struct MainView: View {
                         .bold()
 
                     Button {  } label: {
-                        Image(systemName: "square.and.arrow.down")
-                        Text("Download/Select from API")
-                            .bold()
+                        HStack{
+                            Image(systemName: "square.and.arrow.down")
+                            Text("Download/Select from API")
+                        }
+                        .bold()
+                        .foregroundColor(.white)
                     }
-                    .buttonStyle(.borderedProminent)
-                    //.background("ButtonColor")
-                    .controlSize(.large)
-                    .contentShape(Rectangle())
-                 */
+                    .buttonStyle(MainViewButton())
+                    */
+                    
                 }
 
                 .fullScreenCover(isPresented: $isSheet) {

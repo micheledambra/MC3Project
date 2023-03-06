@@ -24,6 +24,7 @@
 		BCF44C5829A6A9E200ABE8E0 /* ColorExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF44C5729A6A9E200ABE8E0 /* ColorExtractor.swift */; };
 		BCF44C5A29A6B24300ABE8E0 /* SensationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF44C5929A6B24300ABE8E0 /* SensationView.swift */; };
 		C4296BA829B1EE5A00315251 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4296BAA29B1EE5A00315251 /* Localizable.strings */; };
+		C434D94B29B5FCD800D8A90C /* ButtonStyleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434D94A29B5FCD800D8A90C /* ButtonStyleModel.swift */; };
 		C462F1BA299A500C00EE3BB6 /* MC3ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C462F1B9299A500C00EE3BB6 /* MC3ProjectApp.swift */; };
 		C462F1BE299A500D00EE3BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C462F1BD299A500D00EE3BB6 /* Assets.xcassets */; };
 		C462F1C1299A500D00EE3BB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C462F1C0299A500D00EE3BB6 /* Preview Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		BCF44C5929A6B24300ABE8E0 /* SensationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensationView.swift; sourceTree = "<group>"; };
 		C4296BA929B1EE5A00315251 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C4296BAB29B1EE5E00315251 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C434D94A29B5FCD800D8A90C /* ButtonStyleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleModel.swift; sourceTree = "<group>"; };
 		C462F1B6299A500C00EE3BB6 /* MC3Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC3Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C462F1B9299A500C00EE3BB6 /* MC3ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3ProjectApp.swift; sourceTree = "<group>"; };
 		C462F1BD299A500D00EE3BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				4514DEE729ADFCBC00A96D4B /* BubbleAnimation.swift */,
 				1CA8397429B0A7BB00D1B67B /* BubbleAnimation2.swift */,
 				E9E5548629AE01D000ABC826 /* Onboarding.swift */,
+				C434D94A29B5FCD800D8A90C /* ButtonStyleModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				BC9BA07229A7DCF500CCAB68 /* SoundCreator.swift in Sources */,
 				1CA8397529B0A7BB00D1B67B /* BubbleAnimation2.swift in Sources */,
 				BCF44C5829A6A9E200ABE8E0 /* ColorExtractor.swift in Sources */,
+				C434D94B29B5FCD800D8A90C /* ButtonStyleModel.swift in Sources */,
 				BCA77AAF29B12D7900EA789C /* CustomHaptics.swift in Sources */,
 				E98670CB29A8B47D003FD8BB /* MainView.swift in Sources */,
 				4514DEE829ADFCBC00A96D4B /* BubbleAnimation.swift in Sources */,
