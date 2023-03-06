@@ -44,26 +44,11 @@ struct ColorExtractor {
         let blue = Double(imageBytePointer[offset + 2])
 
         let colors = ColorIntesities(red: red, green: green, blue: blue)
-
-        convertToHSB(colorIntesites: colors)
-
         return colors
     }
 
-    private func convertToHSB(colorIntesites : ColorIntesities) {
-        let color = UIColor(red: colorIntesites.scaledRed,
-                              green: colorIntesites.scaledGreen,
-                              blue: colorIntesites.scaledBlue,
-                              alpha: 1.0)
-
-        var hue: CGFloat = 0
-        var saturation: CGFloat = 0
-        var brightness: CGFloat = 0
-        var alpha: CGFloat = 0
-        color.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
-
-        print(colorIntesites)
-        print("Hue: \(hue), Saturation: \(saturation), Brightness: \(brightness)")
+    func getHSB(at positon: Position) -> ColorHSB {
+        let colorIntensities = getRGB(at: positon)
+        return colorIntensities.convertToHSB()
     }
-
 }

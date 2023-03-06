@@ -60,7 +60,7 @@ extension ColorIntesities {
 
         let hsbColor = ColorHSB(hue: Double(hue), saturation: Double(saturation), brightness: Double(brightness))
 
-        print("Hue: \(hue), Saturation: \(saturation), Brightness: \(brightness)")
+        //print("Hue: \(hue), Saturation: \(saturation), Brightness: \(brightness)")
 
         return hsbColor
 
