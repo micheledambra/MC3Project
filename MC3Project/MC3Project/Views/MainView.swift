@@ -52,14 +52,15 @@ struct MainView: View {
                         .bold()
 
                     Button {  } label: {
-                        Image(systemName: "square.and.arrow.down")
-                        Text("Download/Select from API")
-                            .bold()
+                        HStack{
+                            Image(systemName: "square.and.arrow.down")
+                            Text("Download/Select from API")
+                        }
+                        .bold()
+                        .foregroundColor(.white)
                     }
-                    .buttonStyle(.borderedProminent)
-                    //.background("ButtonColor")
-                    .controlSize(.large)
-                    .contentShape(Rectangle())
+                    .buttonStyle(MainViewButton())
+                    
                     
                 }
                 .fullScreenCover(isPresented: $isSheet) {
