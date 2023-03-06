@@ -34,9 +34,12 @@ struct MainView: View {
                                  matching: .any(of: [.images, .not(.livePhotos)])) {
                         Label("Choose from Library", systemImage: "photo")
                             .bold()
-                    }
-                                 .controlSize (.large)
-                                 .buttonStyle(.borderedProminent)
+                            .foregroundColor(.white)
+                            
+                    }.buttonStyle(MainViewButton())
+                                // .controlSize (.large)
+                               //  .buttonStyle(.borderedProminent)
+                    
                                  .onChange(of: selectedItem) { newItem in
                                      selectedItem = newItem
                                      Task{
