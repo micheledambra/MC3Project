@@ -8,86 +8,86 @@
 import SwiftUI
 
 struct LearningView2: View {
-    @State private var circle1Scale: CGFloat = 1
-    @State private var circle2Scale: CGFloat = 1.2
-    @State private var circle3Scale: CGFloat = 0.9
-    @State private var circle4Scale: CGFloat = 1
-    @State private var circle5Scale: CGFloat = 0.9
-    @State private var circle6Scale: CGFloat = 1
-    @State private var circle7Scale: CGFloat = 0.9
-    @State private var circle8Scale: CGFloat = 1
-    @State private var circle9Scale: CGFloat = 1
-    
-    
+
+    @State private var colorsRow1 = [
+        ColorCircle(color: .black),
+        ColorCircle(color: .white),
+        ColorCircle(color: .red),
+    ]
+
+    @State private var colorsRow2 = [
+        ColorCircle(color: .orange),
+        ColorCircle(color: .yellow),
+        ColorCircle(color: .green),
+    ]
+
+    @State private var colorsRow3 = [
+        ColorCircle(color: .blue),
+        ColorCircle(color: .indigo),
+        ColorCircle(color: .purple)
+
+    ]
+
+
+
     var body: some View {
         VStack {
-            HStack {
-                Circle().fill(.black)
-                    .scaleEffect(circle1Scale)
-                    .animation(Animation.easeInOut(duration: 1.5).repeatForever(autoreverses: true))
-                Circle().strokeBorder(.black)
-                    .background(Circle()
-                        .fill(.white))
-                    .scaleEffect(circle3Scale)
-                    .animation(Animation.easeInOut(duration: 1.5).repeatForever(autoreverses: true))
-                Circle().strokeBorder(.red)
-                    .background(Circle()
-                        .fill(.red))
-                    .scaleEffect(circle3Scale)
-                    .animation(Animation.easeInOut(duration: 1.5).repeatForever(autoreverses: true))
-            }
-            
-            .padding()
-            //Spacer()
-            
-            HStack {
-                Circle().strokeBorder(.orange).background(Circle().fill(.orange))
-                    .scaleEffect(circle4Scale)
-                    .animation(Animation.easeInOut(duration: 1.5).repeatForever(autoreverses: true))
-                Circle().strokeBorder(.yellow).background(Circle().fill(.yellow))
-                    .scaleEffect(circle5Scale)
-                    .animation(Animation.easeInOut(duration: 1.5).repeatForever(autoreverses: true))
-                Circle().strokeBorder(.green)
-                    .background(Circle().fill(.green))
-                    .scaleEffect(circle6Scale)
-                    .animation(Animation.easeInOut(duration: 1.5).repeatForever(autoreverses: true))
-            }
-            .padding()
-            //Spacer()
-            
-            HStack {
-                Circle().strokeBorder(.blue)
-                    .background(Circle()
-                        .fill(.blue))
-                    .scaleEffect(circle7Scale)
-                    .animation(Animation.easeInOut(duration: 1.5).repeatForever(autoreverses: true))
-                Circle().strokeBorder(.indigo)
-                    .background(Circle()
-                        .fill(.indigo))
-                    .scaleEffect(circle8Scale)
-                    .animation(Animation.easeInOut(duration: 1.5).repeatForever(autoreverses: true))
-                Circle().strokeBorder(.purple)
-                    .background(Circle().fill(.purple))
-                    .scaleEffect(circle9Scale)
-                    .animation(Animation.easeInOut(duration: 1.5).repeatForever(autoreverses: true))
-            }
-            .onAppear {
-                withAnimation {
-                    circle1Scale = 1.2
-                    circle2Scale = 1.1
-                    circle3Scale = 1.2
-                    circle4Scale = 1.1
-                    circle5Scale = 1.2
-                    circle6Scale = 1.1
-                    circle7Scale = 1.2
-                    circle8Scale = 1.1
-                    circle9Scale = 1.2
-                }
-            }
-            .padding()
+            ColorRowView(colorCircles: $colorsRow1)
+            ColorRowView(colorCircles: $colorsRow2)
+            ColorRowView(colorCircles: $colorsRow3)
         }
     }
 }
+
+
+struct ColorRowView : View {
+
+    @Binding var colorCircles : [ColorCircle]
+
+    var body: some View {
+        HStack {
+            ForEach($colorCircles) { $colorCircle in
+                ColorCircleView(colorCircle: $colorCircle)
+            }
+        }
+        .padding()
+    }
+}
+
+
+struct ColorCircleView: View {
+
+    @Binding var colorCircle : ColorCircle
+
+    var strokeColor : Color {
+        if colorCircle.color == .white {
+            return .black
+        } else {
+            return colorCircle.color
+        }
+    }
+
+    var body: some View {
+        Circle()
+            .strokeBorder(strokeColor)
+            .background(Circle().fill(colorCircle.color))
+            .scaleEffect(colorCircle.scale)
+            .animation(Animation.easeInOut(duration: 1)
+                .repeat(while: colorCircle.isSelected,autoreverses: true), value: colorCircle.scale)
+            .gesture(pressGesture)
+    }
+
+    var pressGesture : some Gesture {
+        DragGesture(minimumDistance: 0)
+            .onChanged { _ in
+                colorCircle.startAnimation()
+            }
+            .onEnded { _ in
+                colorCircle.stopAnimation()
+            }
+    }
+}
+
 struct LearningView2_Previews: PreviewProvider {
     static var previews: some View {
         LearningView2()

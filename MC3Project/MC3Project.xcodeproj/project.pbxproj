@@ -14,6 +14,7 @@
 		BC390A8C29A29A3D00DDDEFF /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = BC390A8B29A29A3D00DDDEFF /* AudioKit */; };
 		BC390A8F29A29A5400DDDEFF /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = BC390A8E29A29A5400DDDEFF /* SoundpipeAudioKit */; };
 		BC390A9429A29BBB00DDDEFF /* VolumeRGBTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC390A9329A29BBB00DDDEFF /* VolumeRGBTestView.swift */; };
+		BC79704329B681BA002B7B80 /* ColorCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC79704229B681BA002B7B80 /* ColorCircle.swift */; };
 		BC9BA07229A7DCF500CCAB68 /* SoundCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BA07129A7DCF500CCAB68 /* SoundCreator.swift */; };
 		BC9BA07429A7E3E000CCAB68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BA07329A7E3E000CCAB68 /* ContentView.swift */; };
 		BC9BA07629A7E92A00CCAB68 /* TestSoundVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9BA07529A7E92A00CCAB68 /* TestSoundVM.swift */; };
@@ -39,6 +40,7 @@
 		1CC79FFC29AF63B60010E005 /* LearningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningView.swift; sourceTree = "<group>"; };
 		4514DEE729ADFCBC00A96D4B /* BubbleAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleAnimation.swift; sourceTree = "<group>"; };
 		BC390A9329A29BBB00DDDEFF /* VolumeRGBTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeRGBTestView.swift; sourceTree = "<group>"; };
+		BC79704229B681BA002B7B80 /* ColorCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCircle.swift; sourceTree = "<group>"; };
 		BC9BA07129A7DCF500CCAB68 /* SoundCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCreator.swift; sourceTree = "<group>"; };
 		BC9BA07329A7E3E000CCAB68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC9BA07529A7E92A00CCAB68 /* TestSoundVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSoundVM.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				BCF44C5729A6A9E200ABE8E0 /* ColorExtractor.swift */,
 				BC9BA07129A7DCF500CCAB68 /* SoundCreator.swift */,
 				BCA77AAE29B12D7900EA789C /* CustomHaptics.swift */,
+				BC79704229B681BA002B7B80 /* ColorCircle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				BC9BA07629A7E92A00CCAB68 /* TestSoundVM.swift in Sources */,
 				1CA8397929B0B54100D1B67B /* LearningView2.swift in Sources */,
 				BC9BA07429A7E3E000CCAB68 /* ContentView.swift in Sources */,
+				BC79704329B681BA002B7B80 /* ColorCircle.swift in Sources */,
 				BCF44C5629A6A48500ABE8E0 /* SensationVM.swift in Sources */,
 				C462F1BA299A500C00EE3BB6 /* MC3ProjectApp.swift in Sources */,
 			);
