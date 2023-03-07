@@ -11,21 +11,20 @@ struct LearningView2: View {
 
     @State private var colorsRow1 = [
         ColorCircle(color: .black),
-        ColorCircle(color: .white),
         ColorCircle(color: .red),
+        ColorCircle(color: .orange),
     ]
 
     @State private var colorsRow2 = [
-        ColorCircle(color: .orange),
         ColorCircle(color: .yellow),
         ColorCircle(color: .green),
+        ColorCircle(color: .blue),
     ]
 
     @State private var colorsRow3 = [
-        ColorCircle(color: .blue),
         ColorCircle(color: .indigo),
-        ColorCircle(color: .purple)
-
+        ColorCircle(color: .purple),
+        ColorCircle(color: .white)
     ]
 
 
