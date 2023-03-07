@@ -18,7 +18,7 @@ struct MC3ProjectApp: App {
                 Settings.bufferLength = .short
                 try AVAudioSession.sharedInstance().setPreferredIOBufferDuration(Settings.bufferLength.duration)
                 try AVAudioSession.sharedInstance().setCategory(.playback,
-                                                                options: [.defaultToSpeaker, .mixWithOthers, .allowBluetoothA2DP])
+                                                                options: [.defaultToSpeaker, .mixWithOthers, .allowBluetoothA2DP, .allowAirPlay, .allowBluetooth])
                 try AVAudioSession.sharedInstance().setActive(true)
             } catch let err {
                 print(err)
