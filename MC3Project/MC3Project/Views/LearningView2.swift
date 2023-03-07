@@ -74,6 +74,8 @@ struct ColorCircleView: View {
             .animation(Animation.easeInOut(duration: 1)
                 .repeat(while: colorCircle.isSelected,autoreverses: true), value: colorCircle.scale)
             .gesture(pressGesture)
+            .accessibilityLabel("\(colorCircle.color.description)")
+            .accessibilityAddTraits(.allowsDirectInteraction)
     }
 
     var pressGesture : some Gesture {
