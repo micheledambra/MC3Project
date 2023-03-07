@@ -11,24 +11,24 @@
 //Tab Bar
 "Color" = "";
 "Sound" = "";
-"Colors" = "";
+"Colors" = "Couleurs";
 
 //Onboarding TO TRANSLATE
-"Feel the Colors" = "";
-"Select a picture from your Photo Library and be ready to perceive colors. Once you're done listening, just shake your phone." = "";
-"Learn Colors" = "";
-"Tap on each color to listen again and learn their sound." = "";
-"Get Started" = "";
+"Feel the Colors" = "Sentir les couleurs";
+"Select a picture from your Photo Library and be ready to perceive colors. Once you're done listening, just shake your phone." = "Choisis une photo dans ta librairie et prépare-toi à percevoir les couleurs. Une fois que tu as fini d'écouter, agite ton IPhone.";
+"Learn Colors" = "Apprendre les couleurs";
+"Tap on each color to listen again and learn their sound." = "Clique sur chanque couleur pour l'écouter à nouveau et apprendre son son.";
+"Get Started" = "On commence";
 
 
 
 //Main View
-"Choose from Library" = "";
+"Choose from Library" = "Choisis dans la librairie";
 "Or" = "";
 "Download/Select from API" = "";
 
 //SensationView
-"Shake to Exit" = "";
+"Shake to Exit" = "Agite pour sortir";
 
 //Error Handling
 
