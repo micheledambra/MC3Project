@@ -23,8 +23,8 @@
 
 //Main View
 "Choose from Library" = "Escolha na galeria";
-"Or" = "Oppure";
-"Download/Select from API" = "Scarica/Seleziona dalle API";
+"Or" = "";
+"Download/Select from API" = "";
 
 //SensationView
 "Shake to Exit" = "Agitar para sair";
