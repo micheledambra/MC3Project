@@ -1,0 +1,36 @@
+/* 
+  Localizable.strings
+  MC3Project
+
+  Created by Michele D'Ambra on 03/03/23.
+  
+*/
+
+//English by default
+
+//Tab Bar
+"Color" = "";
+"Sound" = "";
+"Colors" = "";
+
+//Onboarding TO TRANSLATE
+"Feel the Colors" = "";
+"Select a picture from your Photo Library and be ready to perceive colors. Once you're done listening, just shake your phone." = "";
+"Learn Colors" = "";
+"Tap on each color to listen again and learn their sound." = "";
+"Get Started" = "";
+
+
+
+//Main View
+"Choose from Library" = "";
+"Or" = "";
+"Download/Select from API" = "";
+
+//SensationView
+"Shake to Exit" = "";
+
+//Error Handling
+
+"Extracting data from image not possible" = "";
+
