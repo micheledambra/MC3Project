@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+import SwiftUI
 
 extension UIImage {
 
@@ -161,3 +161,27 @@ extension CGImagePropertyOrientation {
     }
 }
 
+extension Animation {
+    func `repeat`(while expression: Bool, autoreverses: Bool = true) -> Animation {
+        if expression {
+            return self.repeatForever(autoreverses: autoreverses)
+        } else {
+            return self
+        }
+    }
+}
+
+extension Color {
+    func getColorHSB() -> ColorHSB {
+        let uiColor = UIColor(self)
+
+        var hue: CGFloat = 0
+        var saturation: CGFloat = 0
+        var brightness: CGFloat = 0
+        var alpha: CGFloat = 0
+
+        uiColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
+
+        return ColorHSB(hue: hue, saturation: saturation, brightness: brightness)
+    }
+}
