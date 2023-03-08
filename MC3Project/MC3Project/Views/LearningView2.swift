@@ -61,6 +61,8 @@ struct ColorCircleView: View {
     var strokeColor : Color {
         if colorCircle.color == .white {
             return .black
+        } else if (colorCircle.color == .black) {
+            return .white
         } else {
             return colorCircle.color
         }

@@ -58,7 +58,7 @@ struct PageView: View {
                 
                 Text(subtitle)
                     .font(.system(size:24))
-                    .foregroundColor(Color(.black))
+                    .foregroundColor(.primary)
                     .multilineTextAlignment(.center)
                     .padding()
                 
