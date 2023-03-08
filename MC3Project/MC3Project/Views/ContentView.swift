@@ -17,10 +17,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Color", systemImage: "photo.artframe")
                 }
-            VolumeRGBTestView()
+            /*VolumeRGBTestView()
                 .tabItem {
                     Label("Sound", systemImage: "ear.and.waveform")
-                }
+                }*/
             LearningView2()
                 .tabItem {
                     Label("Colors", systemImage: "paintpalette")

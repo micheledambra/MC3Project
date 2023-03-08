@@ -46,7 +46,7 @@ struct MainView: View {
                                          await loadImage()
                                      }
                                  }
-
+/*
                     Text("Or")
                         .padding(22)
                         .bold()
@@ -60,7 +60,7 @@ struct MainView: View {
                         .foregroundColor(.white)
                     }
                     .buttonStyle(MainViewButton())
-                    
+                    */
                     
                 }
                 .fullScreenCover(isPresented: $isSheet) {
