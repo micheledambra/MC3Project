@@ -28,6 +28,10 @@
 
 //SensationView
 "Shake to Exit" = "Agite pour sortir";
+"Are you sure you want to leave this view?" = "Es-tu sûr de quitter cette page?";
+"You will then return to the selection and can choose a new image" = "Tu reviendras ensuite à la selection et tu pourras choisir une nouvelle image";
+"Yes" = "Oui";
+
 
 //Error Handling
 

@@ -43,6 +43,7 @@
 		4514DEE729ADFCBC00A96D4B /* BubbleAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleAnimation.swift; sourceTree = "<group>"; };
 		457430CF29B749D3005839AB /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		BC390A9329A29BBB00DDDEFF /* VolumeRGBTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeRGBTestView.swift; sourceTree = "<group>"; };
+		BC4E54CC29B8E07800C425D7 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		BC79704229B681BA002B7B80 /* ColorCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCircle.swift; sourceTree = "<group>"; };
 		BC9BA07129A7DCF500CCAB68 /* SoundCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCreator.swift; sourceTree = "<group>"; };
 		BC9BA07329A7E3E000CCAB68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -212,6 +213,7 @@
 				de,
 				fr,
 				"pt-BR",
+				"pt-PT",
 			);
 			mainGroup = C462F1AD299A500C00EE3BB6;
 			packageReferences = (
@@ -281,6 +283,7 @@
 				C433320629B7430B001117F5 /* de */,
 				C433320729B7438F001117F5 /* fr */,
 				457430CF29B749D3005839AB /* pt-BR */,
+				BC4E54CC29B8E07800C425D7 /* pt-PT */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

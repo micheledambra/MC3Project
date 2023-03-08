@@ -28,6 +28,9 @@
 
 //SensationView
 "Shake to Exit" = "Zum Schließen schütteln";
+"Are you sure you want to leave this view?" = "Bist du dir sicher, dass du die Ansicht verlassen möchtest?";
+"You will then return to the selection and can choose a new image" = "Du kehrst zur vorherigen Ansicht zurück, wo du ein neues Bild auswählen kannst";
+"Yes" = "Ja";
 
 //Error Handling
 

@@ -26,6 +26,9 @@
 
 //SensationView
 "Shake to Exit" = "Scuoti per uscire";
+"Are you sure you want to leave this view?" = "Sei sicuro di voler lasciare questa pagina?";
+"You will then return to the selection and can choose a new image" = "In questo modo tornerai alla selezione e potrai scegliere una nuova immagine";
+"Yes" = "Sì";
 
 //VolumeRGBTestView
 "Play" = "Play";
