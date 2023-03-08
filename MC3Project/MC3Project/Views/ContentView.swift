@@ -15,7 +15,7 @@ struct ContentView: View {
         TabView {
             MainView()
                 .tabItem {
-                    Label("Color", systemImage: "photo.artframe")
+                    Label("Feel", systemImage: "dot.circle.and.hand.point.up.left.fill")
                 }
             /*VolumeRGBTestView()
                 .tabItem {
