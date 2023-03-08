@@ -17,6 +17,8 @@ struct SensationView: View {
     @State private var scaledImgSize = CGSize()
 
     @ObservedObject var sensationVM : SensationVM
+    
+    @State var circlePosition:CGPoint = CGPoint(x: 0, y: 0)
 
     init(){
         self.img = UIImage(named: "testcolors.png")!
@@ -36,35 +38,7 @@ struct SensationView: View {
         }
 
     }
-
-    var body: some View {
-        VStack {
-            VStack {
-                Rectangle()
-                    .foregroundColor(Color(
-                        red: sensationVM.colorIntensities.scaledRed,
-                        green: sensationVM.colorIntensities.scaledGreen,
-                        blue: sensationVM.colorIntensities.scaledBlue))
-                    .frame(width: 50, height: 50)
-            }
-            
-            VStack {
-                GeometryReader { geo in
-                    resizableImageView(geo: geo)
-                }
-
-            }
-            .gesture(dragGesture)
-            .accessibilityAddTraits(.allowsDirectInteraction)
-           
-            Text("Shake to Exit")
-        }
-        .onShake{ // ADD THIS
-            dismiss()
-              }
-
-    }
-
+    
     var dragGesture: some Gesture {
         DragGesture(minimumDistance: 0)
             .onChanged { value in
@@ -72,12 +46,60 @@ struct SensationView: View {
                 let x = Int(value.location.x)
                 let y = Int(value.location.y)
                 let position = Position(x: x, y: y)
+                circlePosition.x = CGFloat(x)
+                circlePosition.y = CGFloat(y)
                 sensationVM.processDragAction(position: position, scaledImgSize: scaledImgSize)
             }
             .onEnded { _ in
                 sensationVM.isDragging = false
             }
     }
+
+    var body: some View {
+        ZStack() {
+            /*VStack {
+                Circle()
+                    .foregroundColor(Color(
+                        red: sensationVM.colorIntensities.scaledRed,
+                        green: sensationVM.colorIntensities.scaledGreen,
+                        blue: sensationVM.colorIntensities.scaledBlue))
+                    .frame(width: 50, height: 50)
+                    .position(x: circlePosition.x, y: circlePosition.y)
+            }*/
+            
+            //VStack{
+                GeometryReader { geo in
+                    resizableImageView(geo: geo)
+                }
+
+            //}
+            .gesture(dragGesture)
+            .accessibilityAddTraits(.allowsDirectInteraction)
+           
+            if sensationVM.isDragging == true {
+                Circle()
+                    .strokeBorder(.black)
+                    .background(Circle().fill(Color(
+                        red: sensationVM.colorIntensities.scaledRed,
+                        green: sensationVM.colorIntensities.scaledGreen,
+                        blue: sensationVM.colorIntensities.scaledBlue)))
+                    //.foregroundColor(Color(
+                       // red: sensationVM.colorIntensities.scaledRed,
+                       // green: sensationVM.colorIntensities.scaledGreen,
+                        //blue: sensationVM.colorIntensities.scaledBlue))
+                    
+                    .frame(width: 35, height: 35)
+                    .position(x: circlePosition.x, y: (circlePosition.y-40))
+            }
+            //Text("Shake to Exit")
+        }
+        .onShake{ // ADD THIS
+            dismiss()
+              }
+
+    }
+
+    
 
     private func resizableImageView(geo : GeometryProxy) -> some View {
         return Image(uiImage: sensationVM.image)
