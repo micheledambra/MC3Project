@@ -19,6 +19,7 @@ struct SensationView: View {
     @ObservedObject var sensationVM : SensationVM
     
     @State var circlePosition:CGPoint = CGPoint(x: 0, y: 0)
+    @State private var isAlert = false
 
     init(){
         self.img = UIImage(named: "testcolors.png")!
@@ -56,48 +57,72 @@ struct SensationView: View {
     }
 
     var body: some View {
-        ZStack() {
-            /*VStack {
-                Circle()
-                    .foregroundColor(Color(
-                        red: sensationVM.colorIntensities.scaledRed,
-                        green: sensationVM.colorIntensities.scaledGreen,
-                        blue: sensationVM.colorIntensities.scaledBlue))
-                    .frame(width: 50, height: 50)
-                    .position(x: circlePosition.x, y: circlePosition.y)
-            }*/
-            
-            //VStack{
+        NavigationStack {
+            ZStack() {
+                /*VStack {
+                 Circle()
+                 .foregroundColor(Color(
+                 red: sensationVM.colorIntensities.scaledRed,
+                 green: sensationVM.colorIntensities.scaledGreen,
+                 blue: sensationVM.colorIntensities.scaledBlue))
+                 .frame(width: 50, height: 50)
+                 .position(x: circlePosition.x, y: circlePosition.y)
+                 }*/
+
+                //VStack{
                 GeometryReader { geo in
                     resizableImageView(geo: geo)
                     //.position(x: geo.size.width/2, y:geo.size.height/2)
                 }
 
-            //}
-            .gesture(dragGesture)
-            .accessibilityAddTraits(.allowsDirectInteraction)
-           
-            if sensationVM.isDragging == true {
-                Circle()
-                    .strokeBorder(.black)
-                    .background(Circle().fill(Color(
-                        red: sensationVM.colorIntensities.scaledRed,
-                        green: sensationVM.colorIntensities.scaledGreen,
-                        blue: sensationVM.colorIntensities.scaledBlue)))
-                    //.foregroundColor(Color(
-                       // red: sensationVM.colorIntensities.scaledRed,
-                       // green: sensationVM.colorIntensities.scaledGreen,
-                        //blue: sensationVM.colorIntensities.scaledBlue))
-                    
-                    .frame(width: 35, height: 35)
-                    .position(x: circlePosition.x, y: (circlePosition.y-40))
-            }
-            //Text("Shake to Exit")
-        }
-        .onShake{ // ADD THIS
-            dismiss()
-              }
 
+                
+
+                //}
+                .gesture(dragGesture)
+                .accessibilityAddTraits(.allowsDirectInteraction)
+
+                if sensationVM.isDragging == true {
+                    Circle()
+                        .strokeBorder(.black)
+                        .background(Circle().fill(Color(
+                            red: sensationVM.colorIntensities.scaledRed,
+                            green: sensationVM.colorIntensities.scaledGreen,
+                            blue: sensationVM.colorIntensities.scaledBlue)))
+                    //.foregroundColor(Color(
+                    // red: sensationVM.colorIntensities.scaledRed,
+                    // green: sensationVM.colorIntensities.scaledGreen,
+                    //blue: sensationVM.colorIntensities.scaledBlue))
+
+                        .frame(width: 35, height: 35)
+                        .position(x: circlePosition.x, y: (circlePosition.y-40))
+                }
+                //Text("Shake to Exit")
+            }
+            .onShake{
+                isAlert = true
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Image(systemName: "x.circle")
+                        .onTapGesture {
+                            isAlert = true
+                    }
+                        .accessibilityLabel("Button close view")
+                }
+            }
+            .alert(isPresented:$isAlert) {
+                Alert(
+                    title: Text("Are you sure you want to leave this view?"),
+                    message: Text("You will then return to the selection and can choose a new image"),
+                    primaryButton: .default(Text("Yes")) {
+                        dismiss()
+                    },
+                    secondaryButton: .cancel()
+                )
+            }
+
+        }
     }
 
     
